@@ -92,19 +92,29 @@ export default function ExperienceCards() {
               key={c.title}
               href={c.href}
               data-glow
-              className="group relative h-[200px] sm:h-[260px] lg:h-[340px] rounded-[20px] md:rounded-[28px] overflow-hidden shadow-[0_12px_40px_rgba(15,23,42,.12)]
+              className="group flex flex-col rounded-[20px] md:rounded-[24px] overflow-hidden
+                bg-white shadow-[0_8px_32px_rgba(15,23,42,.10)]
                 transition-transform duration-300 hover:-translate-y-2 md:hover:-translate-y-3"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={c.img} alt={c.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute left-3 right-3 bottom-3 md:left-4 md:right-4 md:bottom-4 text-white">
-                <h3 className="font-black text-sm md:text-xl leading-tight mb-0.5">{c.title}</h3>
-                <p className="text-[#dbeafe] text-[10px] md:text-xs font-semibold">{c.desc}</p>
+              {/* Image */}
+              <div className="relative h-[140px] sm:h-[190px] lg:h-[240px] overflow-hidden shrink-0">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={c.img}
+                  alt={c.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                {/* Arrow badge */}
+                <div className="absolute top-3 right-3 w-7 h-7 md:w-8 md:h-8 bg-gold rounded-full flex items-center justify-center
+                  opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[#0f172a] font-black text-xs">
+                  →
+                </div>
               </div>
-              <div className="absolute top-3 right-3 md:top-4 md:right-4 w-7 h-7 md:w-8 md:h-8 bg-gold rounded-full flex items-center justify-center
-                opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[#0f172a] font-black text-xs md:text-sm">
-                →
+
+              {/* Text — always visible below image */}
+              <div className="px-3 py-3 md:px-4 md:py-4">
+                <h3 className="font-black text-slate-900 text-sm md:text-base leading-tight mb-0.5">{c.title}</h3>
+                <p className="text-slate-500 text-[11px] md:text-xs font-medium">{c.desc}</p>
               </div>
             </Link>
           ))}

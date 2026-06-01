@@ -1,5 +1,5 @@
 import Navbar        from "@/components/Navbar";
-import PageHero      from "@/components/PageHero";
+import VehicleHero   from "@/components/VehicleHero";
 import Footer        from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import Link          from "next/link";
@@ -19,25 +19,28 @@ export default function RentACarPage() {
   return (
     <>
       <Navbar />
-      <PageHero
-        kicker="Our Fleet"
-        title="Rent A Car in"
-        em="Sri Lanka"
-        desc="From budget city cars to luxury SUVs and coaches — all vehicles come with professional, English-speaking drivers."
-        img="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1920&q=80"
-        crumbs={[{ label: "Home", href: "/" }, { label: "Rent A Car" }]}
-      />
+      <VehicleHero />
 
-      <section className="bg-[#020617] py-16 px-5">
+      {/* Fleet grid */}
+      <section id="fleet" className="bg-[#020617] py-16 px-4 md:px-5">
         <div className="w-[min(1120px,100%)] mx-auto">
-          <p className="text-center text-white/40 text-sm mb-10">All vehicles are available with professional drivers. Rates shown are starting prices — contact us for exact quotes.</p>
+          <div className="text-center mb-10">
+            <p className="text-gold text-[11px] font-black uppercase tracking-[.2em] mb-2">Full Fleet</p>
+            <h2 className="font-black text-white text-3xl md:text-4xl" style={{ letterSpacing: "-0.03em" }}>
+              Every vehicle. Every budget.
+            </h2>
+            <p className="text-white/40 text-sm mt-3 max-w-lg mx-auto">
+              All vehicles come with professional drivers. Rates shown are starting prices — contact us for exact quotes.
+            </p>
+          </div>
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {vehicles.map((v) => (
               <div
                 key={v.title}
                 data-glow
                 className="bg-white/[.04] border border-white/[.08] rounded-[24px] p-5 flex flex-col gap-3
-                  hover:border-gold/40 hover:bg-white/[.07] transition-all duration-300 group"
+                  hover:border-gold/40 hover:bg-white/[.07] transition-all duration-300"
               >
                 <span className="text-4xl">{v.icon}</span>
                 <div>
@@ -49,8 +52,10 @@ export default function RentACarPage() {
                   <span>✓ {v.best}</span>
                 </div>
                 <p className="text-gold font-black text-base mt-auto">From {v.price}</p>
-                <Link href="/contact"
-                  className="bg-white/[.07] hover:bg-gold hover:text-[#0f172a] text-white text-xs font-black px-4 py-2.5 rounded-full text-center transition-all duration-300">
+                <Link
+                  href="/contact"
+                  className="bg-white/[.07] hover:bg-gold hover:text-[#0f172a] text-white text-xs font-black px-4 py-2.5 rounded-full text-center transition-all duration-300"
+                >
                   Book This Vehicle
                 </Link>
               </div>
@@ -61,18 +66,21 @@ export default function RentACarPage() {
 
       {/* Driver highlight */}
       <section
-        className="relative py-20 px-5 text-center"
+        className="relative py-16 md:py-20 px-4 md:px-5 text-center"
         style={{ background: "linear-gradient(120deg,rgba(2,6,23,.93),rgba(2,6,23,.65)), url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1920&q=80') fixed center/cover" }}
       >
         <p className="text-gold text-[11px] font-black uppercase tracking-[.2em] mb-3">Professional Drivers</p>
-        <h2 className="font-black text-white text-4xl md:text-5xl mb-12" style={{ letterSpacing: "-0.03em" }}>Why choose our drivers?</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 w-[min(900px,100%)] mx-auto">
-          {[["🇱🇰","Local Experts","Deep knowledge of all Sri Lanka destinations and routes"],
+        <h2 className="font-black text-white text-3xl md:text-5xl mb-10 md:mb-12" style={{ letterSpacing: "-0.03em" }}>
+          Why choose our drivers?
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 w-[min(900px,100%)] mx-auto">
+          {[
+            ["🇱🇰","Local Experts","Deep knowledge of all Sri Lanka destinations and routes"],
             ["🗣️","English Speaking","Clear communication for a stress-free journey"],
             ["🛡️","Safety First","Licensed, experienced, trained for passenger safety"],
-            ["⏰","Always Punctual","On time, every time — we value your travel schedule"]
+            ["⏰","Always Punctual","On time, every time — we value your travel schedule"],
           ].map(([ico, title, desc]) => (
-            <div key={title as string} data-glow className="bg-white/[.06] border border-white/[.1] rounded-2xl p-5 text-center">
+            <div key={title as string} data-glow className="bg-white/[.06] border border-white/[.1] rounded-2xl p-4 md:p-5 text-center">
               <span className="text-3xl block mb-3">{ico}</span>
               <h4 className="font-black text-white text-sm mb-1">{title}</h4>
               <p className="text-white/50 text-xs leading-relaxed">{desc}</p>

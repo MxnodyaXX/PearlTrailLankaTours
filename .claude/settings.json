@@ -21,7 +21,9 @@
       "WebFetch(domain:unsplash.com)",
       "Bash(Get-ChildItem -Path \"c:\\\\WebProjects\\\\pearl-trail\\\\components\\\\\" -Recurse -File | Select-Object FullName)",
       "Bash(Find-ChildItem -Path \"c:\\\\WebProjects\\\\pearl-trail\" -Name \"*.css\" -Recurse)",
-      "Bash(Select-Object FullName)"
+      "Bash(Select-Object FullName)",
+      "WebFetch(domain:dribbble.com)",
+      "WebFetch(domain:themewagon.github.io)"
     ]
   }
 }

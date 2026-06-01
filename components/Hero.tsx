@@ -106,7 +106,7 @@ export default function Hero() {
         {/* Mega watermark */}
         <div
           ref={megaRef}
-          className="font-black leading-none mb-[-8px] text-white/[.13] pointer-events-none"
+          className="font-black leading-none mb-8 text-white/[.13] pointer-events-none"
           style={{ fontSize: "clamp(68px,15vw,200px)", letterSpacing: "-0.06em" }}
         >
           PEARLTRAIL
