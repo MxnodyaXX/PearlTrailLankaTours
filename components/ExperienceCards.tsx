@@ -1,0 +1,82 @@
+import Link from "next/link";
+
+const cards = [
+  {
+    title: "Custom Tours",
+    desc:  "Tailor-made Sri Lanka packages",
+    img:   "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&q=80",
+    href:  "/packages",
+  },
+  {
+    title: "Vehicle Rentals",
+    desc:  "Cars, vans, SUVs and coaches",
+    img:   "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&q=80",
+    href:  "/rent-a-car",
+  },
+  {
+    title: "Hotel Booking",
+    desc:  "Budget to luxury resorts",
+    img:   "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
+    href:  "/travel-assistance",
+  },
+  {
+    title: "Airport Transfers",
+    desc:  "Arrival to departure support",
+    img:   "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80",
+    href:  "/travel-assistance",
+  },
+];
+
+export default function ExperienceCards() {
+  return (
+    <section className="bg-[#f8fafc] text-slate-900 py-24 px-5">
+      <div className="w-[min(1120px,100%)] mx-auto">
+
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-9">
+          <div>
+            <p className="text-[11px] font-black uppercase tracking-[.2em] text-teal mb-2">
+              Premium Experiences
+            </p>
+            <h2
+              className="font-black text-slate-900 leading-[.97]"
+              style={{ fontSize: "clamp(28px,4vw,56px)", letterSpacing: "-0.03em" }}
+            >
+              Everything your journey needs.
+            </h2>
+          </div>
+          <p className="text-slate-500 leading-relaxed max-w-md text-[15px]">
+            Tours, hotels, vehicles, transfers and custom itineraries —
+            designed for every type of Sri Lanka traveler.
+          </p>
+        </div>
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {cards.map((c) => (
+            <Link
+              key={c.title}
+              href={c.href}
+              data-glow
+              className="group relative h-[340px] rounded-[28px] overflow-hidden shadow-[0_20px_50px_rgba(15,23,42,.12)]
+                transition-transform duration-300 hover:-translate-y-3"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={c.img} alt={c.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute left-4 right-4 bottom-4 text-white">
+                <h3 className="font-black text-xl leading-tight mb-1">{c.title}</h3>
+                <p className="text-[#dbeafe] text-xs font-semibold">{c.desc}</p>
+              </div>
+              {/* Arrow */}
+              <div className="absolute top-4 right-4 w-8 h-8 bg-gold rounded-full flex items-center justify-center
+                opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[#0f172a] font-black text-sm">
+                →
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

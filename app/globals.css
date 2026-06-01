@@ -1,26 +1,85 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans:      var(--font-inter), system-ui, sans-serif;
+  --color-gold:     #f6b93b;
+  --color-gold-deep:#d4920e;
+  --color-navy:     #020617;
+  --color-mid:      #0f172a;
+  --color-teal:     #0d9488;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+*, *::before, *::after { box-sizing: border-box; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #020617;
+  color: #fff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #020617; }
+::-webkit-scrollbar-thumb { background: rgba(246,185,59,.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(246,185,59,.6); }
+
+::selection { background: rgba(246,185,59,.25); color: #fff; }
+
+@keyframes wa-pulse {
+  0%, 100% { box-shadow: 0 6px 24px rgba(16,185,129,.45); }
+  50%       { box-shadow: 0 6px 24px rgba(16,185,129,.45), 0 0 0 10px rgba(16,185,129,.1); }
+}
+.wa-pulse { animation: wa-pulse 3s ease-in-out infinite; }
+
+/* ── Card lightning / inner-glow effect ─────────────────────────
+   Add data-glow to any card element. CursorGlow.tsx keeps
+   --gx / --gy updated to the mouse position within the card.
+   Two layers:
+     ::before  — gold border spotlight (wraps outside edge)
+     ::after   — soft inner surface glow
+──────────────────────────────────────────────────────────────── */
+[data-glow] {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Border spotlight */
+[data-glow]::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: radial-gradient(
+    260px circle at var(--gx, -999px) var(--gy, -999px),
+    rgba(246,185,59,.45),
+    transparent 70%
+  );
+  z-index: -1;
+  opacity: 0;
+  transition: opacity .25s ease;
+  pointer-events: none;
+}
+[data-glow]:hover::before { opacity: 1; }
+
+/* Inner surface glow */
+[data-glow]::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    200px circle at var(--gx, -999px) var(--gy, -999px),
+    rgba(246,185,59,.09),
+    transparent 70%
+  );
+  z-index: 0;
+  opacity: 0;
+  transition: opacity .25s ease;
+  pointer-events: none;
+}
+[data-glow]:hover::after { opacity: 1; }
+
+/* Children of data-glow cards must sit above the ::after layer */
+[data-glow] > * { position: relative; z-index: 1; }
