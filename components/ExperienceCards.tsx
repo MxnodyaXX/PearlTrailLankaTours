@@ -34,45 +34,27 @@ const cards = [
 ];
 
 export default function ExperienceCards() {
-  const sectionRef  = useRef<HTMLDivElement>(null);
-  const kickerRef   = useRef<HTMLParagraphElement>(null);
-  const headRef     = useRef<HTMLHeadingElement>(null);
-  const descRef     = useRef<HTMLParagraphElement>(null);
-  const gridRef     = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const kickerRef  = useRef<HTMLParagraphElement>(null);
+  const headRef    = useRef<HTMLHeadingElement>(null);
+  const descRef    = useRef<HTMLParagraphElement>(null);
+  const gridRef    = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      /* Header text — stagger slide-up */
       const headerEls = [kickerRef.current, headRef.current, descRef.current].filter(Boolean);
       gsap.set(headerEls, { y: 36, opacity: 0 });
       gsap.to(headerEls, {
-        y: 0,
-        opacity: 1,
-        stagger: 0.13,
-        duration: 0.85,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
+        y: 0, opacity: 1, stagger: 0.13, duration: 0.85, ease: "power2.out",
+        scrollTrigger: { trigger: sectionRef.current, start: "top 80%", toggleActions: "play none none none" },
       });
 
-      /* Cards — stagger clip-path wipe from bottom */
       if (gridRef.current) {
         const cardEls = Array.from(gridRef.current.children);
         gsap.set(cardEls, { clipPath: "inset(0 0 100% 0)", scale: 1.04 });
         gsap.to(cardEls, {
-          clipPath: "inset(0 0 0% 0)",
-          scale: 1,
-          stagger: 0.12,
-          duration: 0.9,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: gridRef.current,
-            start: "top 82%",
-            toggleActions: "play none none none",
-          },
+          clipPath: "inset(0 0 0% 0)", scale: 1, stagger: 0.12, duration: 0.9, ease: "power3.out",
+          scrollTrigger: { trigger: gridRef.current, start: "top 82%", toggleActions: "play none none none" },
         });
       }
     });
@@ -80,11 +62,11 @@ export default function ExperienceCards() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-[#f8fafc] text-slate-900 py-24 px-5">
+    <section ref={sectionRef} className="bg-[#f8fafc] text-slate-900 py-14 md:py-24 px-4 md:px-5">
       <div className="w-[min(1120px,100%)] mx-auto">
 
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-9">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 mb-7 md:mb-9">
           <div>
             <p ref={kickerRef} className="text-[11px] font-black uppercase tracking-[.2em] text-teal mb-2">
               Premium Experiences
@@ -92,36 +74,36 @@ export default function ExperienceCards() {
             <h2
               ref={headRef}
               className="font-black text-slate-900 leading-[.97]"
-              style={{ fontSize: "clamp(28px,4vw,56px)", letterSpacing: "-0.03em" }}
+              style={{ fontSize: "clamp(24px,4vw,56px)", letterSpacing: "-0.03em" }}
             >
               Everything your journey needs.
             </h2>
           </div>
-          <p ref={descRef} className="text-slate-500 leading-relaxed max-w-md text-[15px]">
+          <p ref={descRef} className="text-slate-500 leading-relaxed max-w-md text-[14px] md:text-[15px]">
             Tours, hotels, vehicles, transfers and custom itineraries —
             designed for every type of Sri Lanka traveler.
           </p>
         </div>
 
         {/* Cards */}
-        <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div ref={gridRef} className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5">
           {cards.map((c) => (
             <Link
               key={c.title}
               href={c.href}
               data-glow
-              className="group relative h-[340px] rounded-[28px] overflow-hidden shadow-[0_20px_50px_rgba(15,23,42,.12)]
-                transition-transform duration-300 hover:-translate-y-3"
+              className="group relative h-[200px] sm:h-[260px] lg:h-[340px] rounded-[20px] md:rounded-[28px] overflow-hidden shadow-[0_12px_40px_rgba(15,23,42,.12)]
+                transition-transform duration-300 hover:-translate-y-2 md:hover:-translate-y-3"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={c.img} alt={c.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute left-4 right-4 bottom-4 text-white">
-                <h3 className="font-black text-xl leading-tight mb-1">{c.title}</h3>
-                <p className="text-[#dbeafe] text-xs font-semibold">{c.desc}</p>
+              <div className="absolute left-3 right-3 bottom-3 md:left-4 md:right-4 md:bottom-4 text-white">
+                <h3 className="font-black text-sm md:text-xl leading-tight mb-0.5">{c.title}</h3>
+                <p className="text-[#dbeafe] text-[10px] md:text-xs font-semibold">{c.desc}</p>
               </div>
-              <div className="absolute top-4 right-4 w-8 h-8 bg-gold rounded-full flex items-center justify-center
-                opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[#0f172a] font-black text-sm">
+              <div className="absolute top-3 right-3 md:top-4 md:right-4 w-7 h-7 md:w-8 md:h-8 bg-gold rounded-full flex items-center justify-center
+                opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[#0f172a] font-black text-xs md:text-sm">
                 →
               </div>
             </Link>

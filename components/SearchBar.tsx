@@ -15,14 +15,13 @@ export default function SearchBar() {
 
   return (
     <div
-      className="relative z-30 mx-auto -mt-14"
-      style={{ width: "min(1040px, calc(100% - 36px))" }}
+      className="relative z-30 mx-auto -mt-8 sm:-mt-14 px-3 sm:px-0"
+      style={{ width: "min(1040px, calc(100% - 24px))" }}
     >
       <div
-        className="bg-white/90 backdrop-blur-2xl text-slate-900 rounded-[28px] p-3.5
-          grid grid-cols-[1.2fr_1fr_1fr_auto] gap-2.5
-          shadow-[0_30px_90px_rgba(0,0,0,.28)]
-          max-md:grid-cols-1"
+        className="bg-white/90 backdrop-blur-2xl text-slate-900 rounded-[20px] sm:rounded-[28px] p-3
+          grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_auto] gap-2
+          shadow-[0_20px_60px_rgba(0,0,0,.28)]"
       >
         <Field label="Destination">
           <select
@@ -62,8 +61,8 @@ export default function SearchBar() {
         <button
           onClick={search}
           className="bg-[#0f172a] hover:bg-[#1e293b] text-white font-black text-sm
-            px-7 rounded-[18px] transition-colors whitespace-nowrap
-            max-md:h-12"
+            px-7 h-12 sm:h-auto rounded-[16px] sm:rounded-[18px] transition-colors whitespace-nowrap
+            sm:col-span-1 col-span-1"
         >
           Search
         </button>
@@ -74,7 +73,7 @@ export default function SearchBar() {
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div className="bg-slate-100 rounded-[18px] px-4 py-3.5">
+    <div className="bg-slate-100 rounded-[14px] sm:rounded-[18px] px-4 py-3">
       <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1.5">{label}</p>
       {children}
     </div>

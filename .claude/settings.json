@@ -18,7 +18,10 @@
       "WebFetch(domain:lagom-development.com)",
       "PowerShell(Start-Sleep 5; $outPath = \"C:\\\\Users\\\\mxnod\\\\AppData\\\\Local\\\\Temp\\\\lagom-screenshot.png\"; Start-Process -FilePath \"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\" -ArgumentList \"--headless=new\",\"--screenshot=$outPath\",\"--window-size=1440,900\",\"--disable-gpu\",\"https://lagom-development.com/\"; Start-Sleep 8; Test-Path $outPath)",
       "PowerShell($r = Invoke-WebRequest \"https://lagom-development.com/\" -UseBasicParsing -TimeoutSec 10; $h = $r.Content; $scripts = \\([regex]::Matches\\($h,'<script[^>]+src=\"\\([^\"]+\\)\"'\\)\\).Groups | Where-Object {$_.Name -eq '1'} | Select-Object -ExpandProperty Value; $scripts[0..9])",
-      "WebFetch(domain:unsplash.com)"
+      "WebFetch(domain:unsplash.com)",
+      "Bash(Get-ChildItem -Path \"c:\\\\WebProjects\\\\pearl-trail\\\\components\\\\\" -Recurse -File | Select-Object FullName)",
+      "Bash(Find-ChildItem -Path \"c:\\\\WebProjects\\\\pearl-trail\" -Name \"*.css\" -Recurse)",
+      "Bash(Select-Object FullName)"
     ]
   }
 }

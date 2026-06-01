@@ -57,7 +57,7 @@ const panels: Panel[] = [
 
 export default function JourneySection() {
   return (
-    <section className="bg-[#020617] py-24 md:py-36">
+    <section className="bg-[#020617] py-12 md:py-36">
       {panels.map((p, i) => (
         <PanelRow key={i} panel={p} reverse={i % 2 !== 0} />
       ))}
@@ -81,7 +81,7 @@ function PanelRow({ panel, reverse }: { panel: Panel; reverse: boolean }) {
       const rect     = wrapRef.current.getBoundingClientRect();
       const progress = (rect.top - window.innerHeight / 2) / window.innerHeight;
       const clamped  = Math.max(-1, Math.min(1, progress));
-      imgRef.current.style.transform = `translateY(${clamped * -60}px)`;
+      imgRef.current.style.transform = `translateY(${clamped * -40}px)`;
     };
     window.addEventListener("scroll", handle, { passive: true });
     handle();
@@ -91,7 +91,6 @@ function PanelRow({ panel, reverse }: { panel: Panel; reverse: boolean }) {
   /* ── Scroll reveal ──────────────────────────────────────────── */
   useEffect(() => {
     const ctx = gsap.context(() => {
-      /* Image — lagom-style clip-path expand from vertical center */
       gsap.set(wrapRef.current, { clipPath: "inset(48% 0% 48% 0%)" });
       gsap.to(wrapRef.current, {
         clipPath: "inset(0% 0% 0% 0%)",
@@ -104,7 +103,6 @@ function PanelRow({ panel, reverse }: { panel: Panel; reverse: boolean }) {
         },
       });
 
-      /* Text elements — stagger slide-up from below */
       const els = [kickerRef.current, headRef.current, bodyRef.current, linkRef.current].filter(Boolean);
       gsap.set(els, { y: 40, opacity: 0 });
       gsap.to(els, {
@@ -125,9 +123,9 @@ function PanelRow({ panel, reverse }: { panel: Panel; reverse: boolean }) {
 
   return (
     <div
-      className={`w-[min(1120px,calc(100%-40px))] mx-auto
-        grid grid-cols-1 md:grid-cols-2 gap-12 items-center
-        min-h-[680px] py-12 md:py-20
+      className={`w-[min(1120px,calc(100%-32px))] mx-auto
+        grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center
+        py-8 md:py-20
         ${reverse ? "md:[direction:rtl]" : ""}`}
     >
       {/* Text */}
@@ -137,12 +135,12 @@ function PanelRow({ panel, reverse }: { panel: Panel; reverse: boolean }) {
         </p>
         <h2
           ref={headRef}
-          className="font-black text-white leading-[.97] mb-5"
-          style={{ fontSize: "clamp(32px,4.5vw,64px)", letterSpacing: "-0.03em" }}
+          className="font-black text-white leading-[.97] mb-4"
+          style={{ fontSize: "clamp(26px,4.5vw,64px)", letterSpacing: "-0.03em" }}
         >
           {panel.heading}
         </h2>
-        <p ref={bodyRef} className="text-[#94a3b8] text-[17px] leading-relaxed max-w-[500px] mb-8">
+        <p ref={bodyRef} className="text-[#94a3b8] text-[15px] md:text-[17px] leading-relaxed max-w-[500px] mb-6 md:mb-8">
           {panel.body}
         </p>
         <Link
@@ -158,7 +156,7 @@ function PanelRow({ panel, reverse }: { panel: Panel; reverse: boolean }) {
       <div
         ref={wrapRef}
         data-glow
-        className="md:[direction:ltr] relative h-[480px] md:h-[540px] rounded-[36px] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,.5)]"
+        className="md:[direction:ltr] relative h-[260px] sm:h-[380px] md:h-[540px] rounded-[24px] md:rounded-[36px] overflow-hidden shadow-[0_24px_60px_rgba(0,0,0,.5)]"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -168,9 +166,9 @@ function PanelRow({ panel, reverse }: { panel: Panel; reverse: boolean }) {
           className="w-full object-cover"
           style={{ height: "120%", marginTop: "-5%", transition: "transform .05s linear" }}
         />
-        <div className="absolute left-5 bottom-5 bg-white/85 backdrop-blur-xl text-[#0f172a] rounded-2xl px-4 py-3 shadow-lg">
-          <p className="font-black text-sm leading-tight">{panel.badge}</p>
-          <p className="text-slate-500 text-xs font-bold mt-0.5">{panel.sub}</p>
+        <div className="absolute left-4 bottom-4 bg-white/85 backdrop-blur-xl text-[#0f172a] rounded-xl md:rounded-2xl px-3 md:px-4 py-2 md:py-3 shadow-lg">
+          <p className="font-black text-xs md:text-sm leading-tight">{panel.badge}</p>
+          <p className="text-slate-500 text-[11px] font-bold mt-0.5">{panel.sub}</p>
         </div>
       </div>
     </div>

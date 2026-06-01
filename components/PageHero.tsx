@@ -5,7 +5,7 @@ interface Crumb { label: string; href?: string }
 interface PageHeroProps {
   kicker:  string;
   title:   string;
-  em?:     string;   // italicised part appended after title
+  em?:     string;
   desc:    string;
   img:     string;
   crumbs:  Crumb[];
@@ -13,7 +13,7 @@ interface PageHeroProps {
 
 export default function PageHero({ kicker, title, em, desc, img, crumbs }: PageHeroProps) {
   return (
-    <section className="relative min-h-[420px] flex items-end pb-16 pt-32 px-5 overflow-hidden">
+    <section className="relative min-h-[300px] md:min-h-[420px] flex items-end pb-10 md:pb-16 pt-24 md:pt-32 px-4 md:px-5 overflow-hidden">
       {/* Background */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
@@ -26,7 +26,7 @@ export default function PageHero({ kicker, title, em, desc, img, crumbs }: PageH
 
       <div className="relative z-10 w-[min(1120px,100%)] mx-auto text-white">
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-[11px] font-bold text-white/50 mb-4">
+        <nav className="flex items-center gap-2 text-[11px] font-bold text-white/50 mb-3 md:mb-4 flex-wrap">
           {crumbs.map((c, i) => (
             <span key={i} className="flex items-center gap-2">
               {i > 0 && <span className="text-white/25">›</span>}
@@ -42,11 +42,11 @@ export default function PageHero({ kicker, title, em, desc, img, crumbs }: PageH
         <p className="text-gold text-[11px] font-black uppercase tracking-[.2em] mb-2">{kicker}</p>
         <h1
           className="font-black leading-[.95] mb-3"
-          style={{ fontSize: "clamp(32px,5vw,72px)", letterSpacing: "-0.04em" }}
+          style={{ fontSize: "clamp(28px,5vw,72px)", letterSpacing: "-0.04em" }}
         >
           {title}{em && <> <em className="text-gold">{em}</em></>}
         </h1>
-        <p className="text-[#dbeafe] text-[15px] max-w-xl leading-relaxed">{desc}</p>
+        <p className="text-[#dbeafe] text-[14px] md:text-[15px] max-w-xl leading-relaxed">{desc}</p>
       </div>
     </section>
   );

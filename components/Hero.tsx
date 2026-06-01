@@ -101,7 +101,7 @@ export default function Hero() {
       />
 
       {/* ── Content ──────────────────────────────────────────────── */}
-      <div className="relative z-10 text-center w-[min(1050px,92%)] pt-16 pb-8 select-none">
+      <div className="relative z-10 text-center w-[min(1050px,90%)] pt-16 pb-8 select-none">
 
         {/* Mega watermark */}
         <div

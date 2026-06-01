@@ -44,7 +44,7 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
 export default function StatsBar() {
   return (
     <section className="bg-[#0f172a] py-12 border-y border-white/5">
-      <div className="w-[min(1120px,calc(100%-40px))] mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div className="w-[min(1120px,calc(100%-32px))] mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
         {stats.map((s) => (
           <div key={s.label} className="flex flex-col items-center gap-1">
             <p
