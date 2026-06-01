@@ -8,6 +8,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+
 export const metadata: Metadata = {
   title: "PearlTrailLankaTours — Explore Sri Lanka Beyond the Ordinary",
   description:

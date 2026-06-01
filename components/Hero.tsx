@@ -1,59 +1,111 @@
 "use client";
 import { useEffect, useRef } from "react";
 import Link from "next/link";
+import gsap from "gsap";
 
 export default function Hero() {
-  const skyRef  = useRef<HTMLDivElement>(null);
-  const mistRef = useRef<HTMLDivElement>(null);
+  const bgRef    = useRef<HTMLDivElement>(null);
+  const midRef   = useRef<HTMLDivElement>(null);
+  const mistRef  = useRef<HTMLDivElement>(null);
+  const megaRef  = useRef<HTMLDivElement>(null);
+  const badgeRef = useRef<HTMLDivElement>(null);
+  const line1Ref = useRef<HTMLSpanElement>(null);
+  const line2Ref = useRef<HTMLSpanElement>(null);
+  const subRef   = useRef<HTMLParagraphElement>(null);
+  const btnsRef  = useRef<HTMLDivElement>(null);
+  const hintRef  = useRef<HTMLDivElement>(null);
 
+  /* ── Parallax scroll ──────────────────────────────────────────── */
   useEffect(() => {
     let raf: number;
-    const update = () => {
+    let ticking = false;
+
+    const apply = () => {
       const y = window.scrollY;
-      if (skyRef.current)  skyRef.current.style.transform  = `translateY(${y * 0.18}px) scale(1.08)`;
-      if (mistRef.current) mistRef.current.style.transform = `translateY(${y * 0.33}px)`;
-      raf = requestAnimationFrame(update);
+      if (bgRef.current)   bgRef.current.style.transform   = `translateY(${y * 0.38}px) scale(1.18)`;
+      if (midRef.current)  midRef.current.style.transform  = `translateY(${y * 0.22}px) scale(1.12)`;
+      if (mistRef.current) mistRef.current.style.transform = `translateY(${y * 0.55}px)`;
+      ticking = false;
     };
-    // Only run on scroll
     const onScroll = () => {
-      cancelAnimationFrame(raf);
-      const y = window.scrollY;
-      if (skyRef.current)  skyRef.current.style.transform  = `translateY(${y * 0.18}px) scale(1.08)`;
-      if (mistRef.current) mistRef.current.style.transform = `translateY(${y * 0.33}px)`;
+      if (!ticking) { raf = requestAnimationFrame(apply); ticking = true; }
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => { window.removeEventListener("scroll", onScroll); cancelAnimationFrame(raf); };
   }, []);
 
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#020617]">
+  /* ── Entrance reveal ──────────────────────────────────────────── */
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.set(megaRef.current,  { y: 90, opacity: 0 });
+      gsap.set(badgeRef.current, { scale: 0.82, opacity: 0 });
+      gsap.set([line1Ref.current, line2Ref.current], { y: "115%" });
+      gsap.set(subRef.current,   { y: 28, opacity: 0 });
+      gsap.set(hintRef.current,  { opacity: 0 });
+      if (btnsRef.current)
+        gsap.set(Array.from(btnsRef.current.children), { y: 22, opacity: 0 });
 
-      {/* Sky layer */}
+      const tl = gsap.timeline({ delay: 0.1 });
+
+      tl.to(megaRef.current,  { y: 0, opacity: 1, duration: 1.5, ease: "power2.out" }, 0)
+        .to(badgeRef.current, { scale: 1, opacity: 1, duration: 0.75, ease: "back.out(1.7)" }, 0.3)
+        .to(line1Ref.current, { y: "0%", duration: 1.05, ease: "power3.out" }, 0.48)
+        .to(line2Ref.current, { y: "0%", duration: 1.05, ease: "power3.out" }, 0.64)
+        .to(subRef.current,   { y: 0, opacity: 1, duration: 0.85, ease: "power2.out" }, 0.88)
+        .to(hintRef.current,  { opacity: 1, duration: 0.7 }, 1.6);
+
+      if (btnsRef.current)
+        tl.to(Array.from(btnsRef.current.children), {
+          y: 0, opacity: 1, stagger: 0.13, duration: 0.72, ease: "power2.out",
+        }, 1.04);
+    });
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+
+      {/* ── 1. Dark grunge texture photo — slowest parallax ─────── */}
       <div
-        ref={skyRef}
-        className="absolute inset-[-8%] bg-cover bg-center will-change-transform"
+        ref={bgRef}
+        className="absolute inset-[-18%] bg-cover bg-center will-change-transform"
         style={{
           backgroundImage:
-            "linear-gradient(180deg,rgba(2,6,23,.06),rgba(2,6,23,.18)), url('https://images.unsplash.com/photo-1566296314736-6eaea1755b48?auto=format&fit=crop&w=1920&q=85')",
-          transform: "scale(1.08)",
+            "url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=1920&q=85')",
+          transform: "scale(1.18)",
         }}
       />
 
-      {/* Mist / gradient layer */}
+      {/* ── 2. Depth mid-layer — parallax 0.22× ──────────────────── */}
+      <div
+        ref={midRef}
+        className="absolute inset-[-12%] will-change-transform pointer-events-none"
+        style={{ zIndex: 1, transform: "scale(1.12)" }}
+      />
+
+      {/* ── 3. Bottom fade only — keeps text readable ────────────── */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          zIndex: 2,
+          background:
+            "linear-gradient(to bottom, transparent 0%, transparent 38%, rgba(0,0,0,.72) 100%)",
+        }}
+      />
+
+      {/* ── 4. Near layer — parallax 0.55× ───────────────────────── */}
       <div
         ref={mistRef}
         className="absolute inset-[-8%] will-change-transform pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(circle at 50% 35%, rgba(255,255,255,.14), transparent 35%), linear-gradient(180deg, transparent 30%, rgba(2,6,23,.80))",
-        }}
+        style={{ zIndex: 3, transform: "scale(1.08)" }}
       />
 
-      {/* Content */}
+      {/* ── Content ──────────────────────────────────────────────── */}
       <div className="relative z-10 text-center w-[min(1050px,92%)] pt-16 pb-8 select-none">
 
-        {/* Mega text */}
+        {/* Mega watermark */}
         <div
+          ref={megaRef}
           className="font-black leading-none mb-[-8px] text-white/[.13] pointer-events-none"
           style={{ fontSize: "clamp(68px,15vw,200px)", letterSpacing: "-0.06em" }}
         >
@@ -61,27 +113,34 @@ export default function Hero() {
         </div>
 
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 mb-4 bg-white/[.12] border border-white/[.16] px-4 py-2.5 rounded-full backdrop-blur-xl text-[11px] font-black tracking-widest uppercase">
+        <div
+          ref={badgeRef}
+          className="inline-flex items-center gap-2 mb-4 bg-white/[.12] border border-white/[.16] px-4 py-2.5 rounded-full backdrop-blur-xl text-[11px] font-black tracking-widest uppercase"
+        >
           <span>🇱🇰</span> Premium Sri Lanka Travel Partner
         </div>
 
-        {/* Heading */}
+        {/* Heading — each line inside overflow:hidden for slide-up reveal */}
         <h1
           className="font-black text-white leading-[.94] mb-5"
           style={{ fontSize: "clamp(38px,6.5vw,82px)", letterSpacing: "-0.04em" }}
         >
-          Explore Sri Lanka<br />
-          <span className="text-gold italic">beyond the ordinary.</span>
+          <div style={{ overflow: "hidden" }}>
+            <span ref={line1Ref} className="block">Explore Sri Lanka</span>
+          </div>
+          <div style={{ overflow: "hidden" }}>
+            <span ref={line2Ref} className="block text-gold italic">beyond the ordinary.</span>
+          </div>
         </h1>
 
         {/* Sub */}
-        <p className="text-[#dbeafe] text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+        <p ref={subRef} className="text-[#dbeafe] text-lg leading-relaxed max-w-2xl mx-auto mb-8">
           Luxury tours, airport transfers, hotel bookings, vehicle rentals,
           and complete travel assistance — crafted for unforgettable journeys.
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-10">
+        <div ref={btnsRef} className="flex flex-wrap justify-center gap-3 mb-10">
           <Link
             href="/packages"
             className="bg-gold hover:bg-gold-deep text-[#0f172a] font-black px-6 py-3.5 rounded-full text-sm transition-all hover:-translate-y-0.5 shadow-[0_12px_30px_rgba(246,185,59,.35)]"
@@ -108,7 +167,7 @@ export default function Hero() {
         </div>
 
         {/* Scroll hint */}
-        <div className="flex flex-col items-center gap-2 text-[10px] font-black tracking-[.2em] uppercase text-white/40 mt-4">
+        <div ref={hintRef} className="flex flex-col items-center gap-2 text-[10px] font-black tracking-[.2em] uppercase text-white/40 mt-4">
           <div className="w-5 h-8 rounded-full border border-white/30 flex justify-center pt-1.5">
             <div className="w-0.5 h-2 bg-white/60 rounded-full animate-bounce" />
           </div>

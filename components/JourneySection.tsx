@@ -1,6 +1,10 @@
 "use client";
 import { useEffect, useRef } from "react";
 import Link from "next/link";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface Panel {
   kicker:  string;
@@ -62,9 +66,15 @@ export default function JourneySection() {
 }
 
 function PanelRow({ panel, reverse }: { panel: Panel; reverse: boolean }) {
-  const imgRef  = useRef<HTMLImageElement>(null);
-  const wrapRef = useRef<HTMLDivElement>(null);
+  const imgRef    = useRef<HTMLImageElement>(null);
+  const wrapRef   = useRef<HTMLDivElement>(null);
+  const textRef   = useRef<HTMLDivElement>(null);
+  const kickerRef = useRef<HTMLParagraphElement>(null);
+  const headRef   = useRef<HTMLHeadingElement>(null);
+  const bodyRef   = useRef<HTMLParagraphElement>(null);
+  const linkRef   = useRef<HTMLAnchorElement>(null);
 
+  /* ── Image parallax ─────────────────────────────────────────── */
   useEffect(() => {
     const handle = () => {
       if (!wrapRef.current || !imgRef.current) return;
@@ -78,6 +88,41 @@ function PanelRow({ panel, reverse }: { panel: Panel; reverse: boolean }) {
     return () => window.removeEventListener("scroll", handle);
   }, []);
 
+  /* ── Scroll reveal ──────────────────────────────────────────── */
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      /* Image — lagom-style clip-path expand from vertical center */
+      gsap.set(wrapRef.current, { clipPath: "inset(48% 0% 48% 0%)" });
+      gsap.to(wrapRef.current, {
+        clipPath: "inset(0% 0% 0% 0%)",
+        duration: 1.2,
+        ease: "power3.inOut",
+        scrollTrigger: {
+          trigger: wrapRef.current,
+          start: "top 82%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      /* Text elements — stagger slide-up from below */
+      const els = [kickerRef.current, headRef.current, bodyRef.current, linkRef.current].filter(Boolean);
+      gsap.set(els, { y: 40, opacity: 0 });
+      gsap.to(els, {
+        y: 0,
+        opacity: 1,
+        stagger: 0.13,
+        duration: 0.9,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: "top 82%",
+          toggleActions: "play none none none",
+        },
+      });
+    });
+    return () => ctx.revert();
+  }, []);
+
   return (
     <div
       className={`w-[min(1120px,calc(100%-40px))] mx-auto
@@ -86,20 +131,22 @@ function PanelRow({ panel, reverse }: { panel: Panel; reverse: boolean }) {
         ${reverse ? "md:[direction:rtl]" : ""}`}
     >
       {/* Text */}
-      <div className="md:[direction:ltr]">
-        <p className="text-gold text-[11px] font-black uppercase tracking-[.18em] mb-3">
+      <div ref={textRef} className="md:[direction:ltr]">
+        <p ref={kickerRef} className="text-gold text-[11px] font-black uppercase tracking-[.18em] mb-3">
           {panel.kicker}
         </p>
         <h2
+          ref={headRef}
           className="font-black text-white leading-[.97] mb-5"
           style={{ fontSize: "clamp(32px,4.5vw,64px)", letterSpacing: "-0.03em" }}
         >
           {panel.heading}
         </h2>
-        <p className="text-[#94a3b8] text-[17px] leading-relaxed max-w-[500px] mb-8">
+        <p ref={bodyRef} className="text-[#94a3b8] text-[17px] leading-relaxed max-w-[500px] mb-8">
           {panel.body}
         </p>
         <Link
+          ref={linkRef}
           href={panel.href}
           className="inline-flex items-center gap-2 bg-gold hover:bg-gold-deep text-[#0f172a] font-black text-sm px-6 py-3 rounded-full transition-all hover:-translate-y-0.5"
         >
@@ -121,7 +168,6 @@ function PanelRow({ panel, reverse }: { panel: Panel; reverse: boolean }) {
           className="w-full object-cover"
           style={{ height: "120%", marginTop: "-5%", transition: "transform .05s linear" }}
         />
-        {/* Badge */}
         <div className="absolute left-5 bottom-5 bg-white/85 backdrop-blur-xl text-[#0f172a] rounded-2xl px-4 py-3 shadow-lg">
           <p className="font-black text-sm leading-tight">{panel.badge}</p>
           <p className="text-slate-500 text-xs font-bold mt-0.5">{panel.sub}</p>

@@ -1,4 +1,10 @@
+"use client";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
   {
@@ -28,31 +34,77 @@ const cards = [
 ];
 
 export default function ExperienceCards() {
+  const sectionRef  = useRef<HTMLDivElement>(null);
+  const kickerRef   = useRef<HTMLParagraphElement>(null);
+  const headRef     = useRef<HTMLHeadingElement>(null);
+  const descRef     = useRef<HTMLParagraphElement>(null);
+  const gridRef     = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      /* Header text — stagger slide-up */
+      const headerEls = [kickerRef.current, headRef.current, descRef.current].filter(Boolean);
+      gsap.set(headerEls, { y: 36, opacity: 0 });
+      gsap.to(headerEls, {
+        y: 0,
+        opacity: 1,
+        stagger: 0.13,
+        duration: 0.85,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      /* Cards — stagger clip-path wipe from bottom */
+      if (gridRef.current) {
+        const cardEls = Array.from(gridRef.current.children);
+        gsap.set(cardEls, { clipPath: "inset(0 0 100% 0)", scale: 1.04 });
+        gsap.to(cardEls, {
+          clipPath: "inset(0 0 0% 0)",
+          scale: 1,
+          stagger: 0.12,
+          duration: 0.9,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: gridRef.current,
+            start: "top 82%",
+            toggleActions: "play none none none",
+          },
+        });
+      }
+    });
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="bg-[#f8fafc] text-slate-900 py-24 px-5">
+    <section ref={sectionRef} className="bg-[#f8fafc] text-slate-900 py-24 px-5">
       <div className="w-[min(1120px,100%)] mx-auto">
 
         {/* Header */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-9">
           <div>
-            <p className="text-[11px] font-black uppercase tracking-[.2em] text-teal mb-2">
+            <p ref={kickerRef} className="text-[11px] font-black uppercase tracking-[.2em] text-teal mb-2">
               Premium Experiences
             </p>
             <h2
+              ref={headRef}
               className="font-black text-slate-900 leading-[.97]"
               style={{ fontSize: "clamp(28px,4vw,56px)", letterSpacing: "-0.03em" }}
             >
               Everything your journey needs.
             </h2>
           </div>
-          <p className="text-slate-500 leading-relaxed max-w-md text-[15px]">
+          <p ref={descRef} className="text-slate-500 leading-relaxed max-w-md text-[15px]">
             Tours, hotels, vehicles, transfers and custom itineraries —
             designed for every type of Sri Lanka traveler.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {cards.map((c) => (
             <Link
               key={c.title}
@@ -68,7 +120,6 @@ export default function ExperienceCards() {
                 <h3 className="font-black text-xl leading-tight mb-1">{c.title}</h3>
                 <p className="text-[#dbeafe] text-xs font-semibold">{c.desc}</p>
               </div>
-              {/* Arrow */}
               <div className="absolute top-4 right-4 w-8 h-8 bg-gold rounded-full flex items-center justify-center
                 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[#0f172a] font-black text-sm">
                 →

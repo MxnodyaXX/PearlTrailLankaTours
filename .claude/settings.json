@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"c:\\\\WebProjects\\\\pearl-trail\" -Force)",
+      "Bash(Select-Object Name, PSIsContainer)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(where chromium *)",
+      "Bash(where chromium-browser *)",
+      "Bash(where google-chrome *)",
+      "Bash(npx --yes playwright --version)",
+      "Bash(npx playwright *)",
+      "PowerShell($outPath = \"C:\\\\Users\\\\mxnod\\\\AppData\\\\Local\\\\Temp\\\\hero-check.png\"; & \"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\" --headless=new --screenshot=\"$outPath\" --window-size=1440,900 --disable-gpu http://localhost:3000 2>&1; Start-Sleep 3; Test-Path $outPath)",
+      "PowerShell($outPath = \"C:\\\\Users\\\\mxnod\\\\AppData\\\\Local\\\\Temp\\\\hero-check.png\"; Start-Process -FilePath \"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\" -ArgumentList \"--headless=new\",\"--screenshot=$outPath\",\"--window-size=1440,900\",\"--disable-gpu\",\"http://localhost:3000\" -Wait -NoNewWindow; Test-Path $outPath)",
+      "Bash(sleep 6 && ls /mnt/c/Users/mxnod/AppData/Local/Temp/hero-check.png 2>/dev/null && echo \"EXISTS\" || echo \"NOT FOUND\")",
+      "Read(//mnt/c/Users/mxnod/AppData/Local/Temp/**)",
+      "PowerShell(Start-Sleep 6; try { $r = Invoke-WebRequest http://localhost:3000 -TimeoutSec 5; \"HTTP $\\($r.StatusCode\\)\" } catch { $_.Exception.Message })",
+      "WebFetch(domain:lagom-development.com)",
+      "PowerShell(Start-Sleep 5; $outPath = \"C:\\\\Users\\\\mxnod\\\\AppData\\\\Local\\\\Temp\\\\lagom-screenshot.png\"; Start-Process -FilePath \"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\" -ArgumentList \"--headless=new\",\"--screenshot=$outPath\",\"--window-size=1440,900\",\"--disable-gpu\",\"https://lagom-development.com/\"; Start-Sleep 8; Test-Path $outPath)",
+      "PowerShell($r = Invoke-WebRequest \"https://lagom-development.com/\" -UseBasicParsing -TimeoutSec 10; $h = $r.Content; $scripts = \\([regex]::Matches\\($h,'<script[^>]+src=\"\\([^\"]+\\)\"'\\)\\).Groups | Where-Object {$_.Name -eq '1'} | Select-Object -ExpandProperty Value; $scripts[0..9])",
+      "WebFetch(domain:unsplash.com)"
+    ]
+  }
+}
