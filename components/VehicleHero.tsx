@@ -99,7 +99,7 @@ export default function VehicleHero() {
         <div className="vh-img-wrap w-full h-full">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://images.unsplash.com/photo-1552055642-554ec085233a?auto=format&fit=crop&w=1400&q=90"
+            src="https://images.unsplash.com/photo-1758411897832-9c1ff680fff3?auto=format&fit=crop&w=1400&q=90"
             alt="Premium 4×4 SUV"
             className="w-full h-full object-cover"
             style={{ objectPosition: "40% center" }}
@@ -108,9 +108,9 @@ export default function VehicleHero() {
           <div className="absolute inset-0" style={{
             background: "linear-gradient(to right, #020617 0%, rgba(2,6,23,.75) 18%, rgba(2,6,23,.25) 45%, transparent 70%)",
           }}/>
-          {/* Top + bottom fade */}
+          {/* Top + bottom fade — image dissolves fully into dark */}
           <div className="absolute inset-0" style={{
-            background: "linear-gradient(to bottom, rgba(2,6,23,.55) 0%, transparent 25%, transparent 72%, rgba(2,6,23,.85) 100%)",
+            background: "linear-gradient(to bottom, rgba(2,6,23,.55) 0%, transparent 22%, transparent 58%, rgba(2,6,23,.80) 78%, #020617 100%)",
           }}/>
         </div>
       </div>
@@ -183,9 +183,9 @@ export default function VehicleHero() {
         </div>
       </div>
 
-      {/* ── Bottom vignette ──────────────────────────────────────── */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none" style={{ zIndex: 11,
-        background: "linear-gradient(to bottom, transparent, #020617)" }}/>
+      {/* ── Bottom dissolve — tall fade so section blends seamlessly ── */}
+      <div className="absolute bottom-0 left-0 right-0 pointer-events-none" style={{ zIndex: 11, height: "45%",
+        background: "linear-gradient(to bottom, transparent 0%, rgba(2,6,23,.4) 40%, rgba(2,6,23,.82) 70%, #020617 100%)" }}/>
     </section>
   );
 }

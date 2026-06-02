@@ -63,7 +63,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#020617]">
 
       {/* ── 1. Dark grunge texture photo — slowest parallax ─────── */}
       <div
@@ -83,13 +83,13 @@ export default function Hero() {
         style={{ zIndex: 1, transform: "scale(1.12)" }}
       />
 
-      {/* ── 3. Bottom fade only — keeps text readable ────────────── */}
+      {/* ── 3. Colour-grade + full bottom dissolve ───────────────── */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           zIndex: 2,
           background:
-            "linear-gradient(to bottom, transparent 0%, transparent 38%, rgba(0,0,0,.72) 100%)",
+            "linear-gradient(to bottom, transparent 0%, transparent 35%, rgba(2,6,23,.55) 65%, rgba(2,6,23,.88) 82%, #020617 100%)",
         }}
       />
 
