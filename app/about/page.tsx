@@ -30,7 +30,7 @@ export default function AboutPage() {
         <div className="w-[min(1120px,100%)] mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="relative">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=700&q=80" alt="Sri Lanka" className="rounded-[32px] w-full h-[480px] object-cover" />
+            <img src="https://images.unsplash.com/photo-1663784025074-49e9e7f11f62?auto=format&fit=crop&w=700&q=80" alt="Sigiriya Sri Lanka" className="rounded-[32px] w-full h-[480px] object-cover" />
             <div className="absolute bottom-5 left-5 bg-white/85 backdrop-blur-xl rounded-2xl px-4 py-3">
               <p className="font-black text-slate-900 text-sm">PearlTrailLankaTours</p>
               <p className="text-slate-500 text-xs font-bold mt-0.5">Colombo, Sri Lanka</p>

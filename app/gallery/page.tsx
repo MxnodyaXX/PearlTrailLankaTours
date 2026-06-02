@@ -6,18 +6,18 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { useState }  from "react";
 
 const photos = [
-  { src:"https://images.unsplash.com/photo-1566296314736-6eaea1755b48?auto=format&fit=crop&w=800&q=80", label:"Sigiriya Rock Fortress" },
-  { src:"https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&q=80", label:"Kandy — Temple of the Tooth" },
-  { src:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80", label:"Nuwara Eliya Tea Plantation" },
-  { src:"https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80", label:"Galle Dutch Fort" },
+  { src:"https://images.unsplash.com/photo-1663784025074-49e9e7f11f62?auto=format&fit=crop&w=800&q=80", label:"Sigiriya Rock Fortress" },
+  { src:"https://images.unsplash.com/photo-1665849050332-8d5d7e59afb6?auto=format&fit=crop&w=800&q=80", label:"Kandy — Temple of the Tooth" },
+  { src:"https://images.unsplash.com/photo-1544015759-237f87d55ef3?auto=format&fit=crop&w=800&q=80", label:"Nuwara Eliya Tea Plantation" },
+  { src:"https://images.unsplash.com/photo-1547818832-470a7998a99a?auto=format&fit=crop&w=800&q=80", label:"Galle Dutch Fort" },
   { src:"https://images.unsplash.com/photo-1590862891-d5545e1d6e4a?auto=format&fit=crop&w=800&q=80", label:"Ella Hill Country" },
-  { src:"https://images.unsplash.com/photo-1540202404-1b927e27fa8b?auto=format&fit=crop&w=800&q=80", label:"Mirissa Beach" },
+  { src:"https://images.unsplash.com/photo-1776336885293-fba436d4281a?auto=format&fit=crop&w=800&q=80", label:"Mirissa Beach" },
   { src:"https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80", label:"South Coast Sunset" },
-  { src:"https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=800&q=80", label:"Ancient Heritage Site" },
-  { src:"https://images.unsplash.com/photo-1595152772835-219674b2a163?auto=format&fit=crop&w=800&q=80", label:"Misty Hill Country" },
-  { src:"https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80", label:"Sri Lanka Mountains" },
-  { src:"https://images.unsplash.com/photo-1448375240890-95a3e6b83b13?auto=format&fit=crop&w=800&q=80", label:"Tropical Rainforest" },
-  { src:"https://images.unsplash.com/photo-1560693463-a8adb872c70c?auto=format&fit=crop&w=800&q=80", label:"Colombo City" },
+  { src:"https://images.unsplash.com/photo-1663403764000-f927ff20fcbb?auto=format&fit=crop&w=800&q=80", label:"Anuradhapura — Ruwanweli Stupa" },
+  { src:"https://images.unsplash.com/photo-1566650576880-6740b03eaad1?auto=format&fit=crop&w=800&q=80", label:"Elephant Safari — Sri Lanka" },
+  { src:"https://images.unsplash.com/photo-1552055642-554ec085233a?auto=format&fit=crop&w=800&q=80", label:"Kandy Mountain Road" },
+  { src:"https://images.unsplash.com/photo-1533484482814-3fe2d922be89?auto=format&fit=crop&w=800&q=80", label:"Pinnawala Elephant Orphanage" },
+  { src:"https://images.unsplash.com/photo-1736142260757-6effc558100a?auto=format&fit=crop&w=800&q=80", label:"Colombo City Skyline" },
 ];
 
 export default function GalleryPage() {
@@ -31,7 +31,7 @@ export default function GalleryPage() {
         title="Our"
         em="Gallery"
         desc="Sri Lanka captured through our lens — stunning landscapes, ancient temples, golden beaches and more. Click any photo to enlarge."
-        img="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1920&q=80"
+        img="https://images.unsplash.com/photo-1663784025074-49e9e7f11f62?auto=format&fit=crop&w=1920&q=80"
         crumbs={[{ label: "Home", href: "/" }, { label: "Gallery" }]}
       />
 

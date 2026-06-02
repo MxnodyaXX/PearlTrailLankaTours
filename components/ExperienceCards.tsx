@@ -10,7 +10,7 @@ const cards = [
   {
     title: "Custom Tours",
     desc:  "Tailor-made Sri Lanka packages",
-    img:   "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=800&q=80",
+    img:   "https://images.unsplash.com/photo-1663784025074-49e9e7f11f62?auto=format&fit=crop&w=800&q=80",
     href:  "/packages",
   },
   {
@@ -22,7 +22,7 @@ const cards = [
   {
     title: "Hotel Booking",
     desc:  "Budget to luxury resorts",
-    img:   "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
+    img:   "https://images.unsplash.com/photo-1704797390597-24dea42ffea8?auto=format&fit=crop&w=800&q=80",
     href:  "/travel-assistance",
   },
   {

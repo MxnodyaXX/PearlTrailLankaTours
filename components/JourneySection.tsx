@@ -39,7 +39,7 @@ const panels: Panel[] = [
     kicker:  "03 · Wild Sri Lanka",
     heading: "Safari moments unlike any other.",
     body:    "Yala and Udawalawe wildlife experiences with jeep reservations, naturalist guides, safari-side lodges, and full itinerary management.",
-    img:     "https://images.unsplash.com/photo-1590862891-d5545e1d6e4a?auto=format&fit=crop&w=1200&q=80",
+    img:     "https://images.unsplash.com/photo-1566650576880-6740b03eaad1?auto=format&fit=crop&w=1200&q=80",
     badge:   "Wildlife Safari",
     sub:     "Yala · Udawalawe · Wilpattu",
     href:    "/packages",

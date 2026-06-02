@@ -19,7 +19,7 @@ export default function TripPlanner() {
       className="relative flex items-center justify-center py-14 md:py-24 px-4"
       style={{
         background:
-          "linear-gradient(120deg,rgba(2,6,23,.92),rgba(2,6,23,.60)), url('https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&w=1920&q=80') fixed center/cover",
+          "linear-gradient(120deg,rgba(2,6,23,.92),rgba(2,6,23,.60)), url('https://images.unsplash.com/photo-1544015759-237f87d55ef3?auto=format&fit=crop&w=1920&q=80') fixed center/cover",
       }}
     >
       <div

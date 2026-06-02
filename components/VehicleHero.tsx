@@ -99,7 +99,7 @@ export default function VehicleHero() {
         <div className="vh-img-wrap w-full h-full">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://images.unsplash.com/photo-1637859460045-ac3ae9ced99d?auto=format&fit=crop&w=1400&q=90"
+            src="https://images.unsplash.com/photo-1552055642-554ec085233a?auto=format&fit=crop&w=1400&q=90"
             alt="Premium 4×4 SUV"
             className="w-full h-full object-cover"
             style={{ objectPosition: "40% center" }}
