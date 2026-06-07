@@ -22,6 +22,15 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${inter.variable} h-full`}>
+      <head>
+        {/* Apply saved theme before paint to avoid a flash */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{if(localStorage.getItem('theme')==='light'){document.documentElement.classList.add('light');}}catch(e){}})();",
+          }}
+        />
+      </head>
       <body className="min-h-full">
         <PageTransition />
         <CursorGlow />

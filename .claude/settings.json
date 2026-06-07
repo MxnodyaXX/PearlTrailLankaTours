@@ -23,7 +23,17 @@
       "Bash(Find-ChildItem -Path \"c:\\\\WebProjects\\\\pearl-trail\" -Name \"*.css\" -Recurse)",
       "Bash(Select-Object FullName)",
       "WebFetch(domain:dribbble.com)",
-      "WebFetch(domain:themewagon.github.io)"
+      "WebFetch(domain:themewagon.github.io)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl -s \"http://localhost:3000/_next/static/css/\"*.css)",
+      "Bash(curl -s http://localhost:3000/rent-a-car)",
+      "Bash(ls /c/WebProjects/pearl-trail/node_modules | grep -i playwright || echo \"no-playwright-in-project\"; ls \"/c/Users/mxnod/AppData/Roaming/npm/node_modules\" 2>/dev/null | grep -i playwright || echo \"checking-npx-cache\")",
+      "Read(//c/Users/mxnod/AppData/Roaming/npm/**)",
+      "Bash(taskkill //F //IM node.exe)",
+      "WebFetch(domain:chatgpt.com)",
+      "Bash(curl -s http://localhost:3000/discover)",
+      "Bash(rm -f DiscoverHero.tsx DiscoverStory.tsx DiscoverDestinations.tsx DiscoverClosing.tsx)",
+      "Bash(ls Discover*)"
     ]
   }
 }

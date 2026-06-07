@@ -75,27 +75,27 @@ export default function PageTransition() {
         }}
       />
 
-      {/* Brand mark */}
+      {/* Brand mark — explicit colours so the curtain stays dark in both themes */}
       <div ref={logoRef} className="relative text-center" style={{ opacity: 0 }}>
         {/* Thin rule above */}
-        <div className="w-8 h-px bg-white/20 mx-auto mb-5" />
+        <div className="w-8 h-px mx-auto mb-5" style={{ background: "rgba(255,255,255,.2)" }} />
 
         <p
-          className="font-black text-white tracking-tight"
-          style={{ fontSize: "clamp(28px,6vw,44px)", letterSpacing: "-0.04em" }}
+          className="font-black tracking-tight"
+          style={{ fontSize: "clamp(28px,6vw,44px)", letterSpacing: "-0.04em", color: "#fff" }}
         >
           Pearl<span style={{ color: "#f6b93b" }}>Trail</span>
         </p>
-        <p className="mt-1.5 text-[9px] font-extrabold uppercase tracking-[0.35em] text-white/35">
+        <p className="mt-1.5 text-[9px] font-extrabold uppercase tracking-[0.35em]" style={{ color: "rgba(255,255,255,.35)" }}>
           Lanka Tours
         </p>
 
         {/* Thin rule below */}
-        <div className="w-8 h-px bg-white/20 mx-auto mt-5" />
+        <div className="w-8 h-px mx-auto mt-5" style={{ background: "rgba(255,255,255,.2)" }} />
       </div>
 
       {/* Progress bar */}
-      <div className="w-24 h-[1.5px] bg-white/10 rounded-full overflow-hidden">
+      <div className="w-24 h-[1.5px] rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,.1)" }}>
         <div
           ref={barRef}
           className="h-full rounded-full"

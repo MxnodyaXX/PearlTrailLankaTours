@@ -1,8 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
 
 const links = [
+  { label: "Discover",   href: "/discover" },
   { label: "Packages",   href: "/packages" },
   { label: "Vehicles",   href: "/rent-a-car" },
   { label: "Services",   href: "/travel-assistance" },
@@ -53,6 +55,7 @@ export default function Navbar() {
 
         {/* Desktop CTAs */}
         <div className="hidden md:flex items-center gap-2 shrink-0">
+          <ThemeToggle />
           <a
             href="https://wa.me/94741838376"
             target="_blank"
@@ -72,17 +75,20 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Hamburger */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden flex flex-col gap-[5px] p-2 ml-2"
-          aria-label="Toggle menu"
-          aria-expanded={open}
-        >
-          <span className={`block w-5 h-0.5 bg-white rounded transition-all duration-300 ${open ? "translate-y-[7px] rotate-45" : ""}`} />
-          <span className={`block w-5 h-0.5 bg-white rounded transition-all duration-300 ${open ? "opacity-0" : ""}`} />
-          <span className={`block w-5 h-0.5 bg-white rounded transition-all duration-300 ${open ? "-translate-y-[7px] -rotate-45" : ""}`} />
-        </button>
+        {/* Mobile controls */}
+        <div className="md:hidden flex items-center gap-1.5">
+          <ThemeToggle />
+          <button
+            onClick={() => setOpen(!open)}
+            className="flex flex-col gap-[5px] p-2"
+            aria-label="Toggle menu"
+            aria-expanded={open}
+          >
+            <span className={`hamburger-line block w-5 h-0.5 rounded transition-all duration-300 ${open ? "translate-y-[7px] rotate-45" : ""}`} />
+            <span className={`hamburger-line block w-5 h-0.5 rounded transition-all duration-300 ${open ? "opacity-0" : ""}`} />
+            <span className={`hamburger-line block w-5 h-0.5 rounded transition-all duration-300 ${open ? "-translate-y-[7px] -rotate-45" : ""}`} />
+          </button>
+        </div>
       </nav>
 
       {/* Mobile drawer */}
