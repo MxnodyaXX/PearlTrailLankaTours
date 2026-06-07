@@ -3,17 +3,7 @@ import PageHero      from "@/components/PageHero";
 import Footer        from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import Link          from "next/link";
-
-const packages = [
-  { id:"colombo",     title:"Colombo City Tour",           days:"1 Day",         price:"LKR 18,000", img:"https://images.unsplash.com/photo-1736142260757-6effc558100a?auto=format&fit=crop&w=800&q=80", desc:"Colombo Fort · Galle Face · Gangaramaya · Lotus Tower · One Galle Face", inc:"Private vehicle, driver, fuel, city guidance", exc:"Entrance tickets, meals, personal expenses" },
-  { id:"galle",       title:"Galle Heritage Tour",         days:"1 Day",         price:"LKR 28,000", img:"https://images.unsplash.com/photo-1547818832-470a7998a99a?auto=format&fit=crop&w=800&q=80", desc:"Galle Fort · Unawatuna Beach · Jungle Beach · Dutch Fort · Lighthouse", inc:"Private transport, driver, highway charges", exc:"Meals, entrance tickets, activity fees" },
-  { id:"kandy",       title:"Kandy Cultural Tour",         days:"2D / 1N",       price:"LKR 45,000", img:"https://images.unsplash.com/photo-1665849050332-8d5d7e59afb6?auto=format&fit=crop&w=800&q=80", desc:"Temple of the Tooth · Peradeniya Garden · Kandy Lake · Cultural Dance Show", inc:"Vehicle, driver, fuel, hotel assistance", exc:"Hotel charges, meals, entrance tickets" },
-  { id:"nuwara",      title:"Nuwara Eliya Tea Tour",       days:"2D / 1N",       price:"LKR 52,000", img:"https://images.unsplash.com/photo-1544015759-237f87d55ef3?auto=format&fit=crop&w=800&q=80", desc:"Tea Plantations · Gregory Lake · Ramboda Falls · Hakgala Garden · Seetha Amman Temple", inc:"Transport, driver, fuel, travel guidance", exc:"Accommodation, meals, entry fees" },
-  { id:"ella",        title:"Ella Adventure Tour",         days:"3D / 2N",       price:"LKR 68,000", img:"https://images.unsplash.com/photo-1590862891-d5545e1d6e4a?auto=format&fit=crop&w=800&q=80", desc:"Nine Arch Bridge · Little Adam's Peak · Ravana Falls · Ella Rock · Tea Estates", inc:"Private transport, driver, route planning", exc:"Hotel, meals, activity charges" },
-  { id:"jaffna",      title:"Jaffna Northern Experience",  days:"3D / 2N",       price:"LKR 75,000", img:"https://images.unsplash.com/photo-1621393614326-2f9ed389ce02?auto=format&fit=crop&w=800&q=80", desc:"Jaffna Fort · Nallur Temple · Casuarina Beach · Delft Island · Point Pedro", inc:"Vehicle, driver, fuel, route planning", exc:"Accommodation, meals, ferry charges, entrance tickets" },
-  { id:"anuradhapura",title:"Anuradhapura Heritage Tour",  days:"2D / 1N",       price:"LKR 48,000", img:"https://images.unsplash.com/photo-1663403764000-f927ff20fcbb?auto=format&fit=crop&w=800&q=80", desc:"Sri Maha Bodhi · Ruwanwelisaya · Thuparamaya · Mihintale · Isurumuniya", inc:"Private vehicle, driver, fuel", exc:"Accommodation, meals, entrance fees" },
-  { id:"southern",    title:"Southern Beach Escape",       days:"4D / 3N",       price:"LKR 95,000", img:"https://images.unsplash.com/photo-1776336885293-fba436d4281a?auto=format&fit=crop&w=800&q=80", desc:"Galle · Mirissa · Weligama · Unawatuna · Bentota", inc:"Vehicle, driver, route planning", exc:"Hotel, meals, activity fees" },
-];
+import { packages }  from "@/lib/packages-data";
 
 export default function PackagesPage() {
   return (
@@ -28,21 +18,21 @@ export default function PackagesPage() {
         crumbs={[{ label: "Home", href: "/" }, { label: "Tour Packages" }]}
       />
 
-      <section className="bg-[#020617] py-16 px-5">
+      <section className="bg-navy py-16 px-5">
         <div className="w-[min(1120px,100%)] mx-auto flex flex-col gap-6">
           {packages.map((p) => (
             <article
               key={p.id}
               id={p.id}
               data-glow
-              className="grid md:grid-cols-[400px_1fr] bg-white/[.04] border border-white/[.08] rounded-[28px] overflow-hidden
+              className="grid md:grid-cols-[400px_1fr] bg-white/4 border border-white/8 rounded-[28px] overflow-hidden
                 hover:border-white/[.14] transition-colors duration-300"
             >
               {/* Image */}
-              <div className="relative h-60 md:h-auto min-h-[260px]">
+              <div className="relative h-60 md:h-auto min-h-65">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={p.img} alt={p.title} className="w-full h-full object-cover" />
-                <span className="absolute top-4 left-4 bg-gold text-[#0f172a] text-xs font-black px-3 py-1.5 rounded-full">
+                <span className="absolute top-4 left-4 bg-gold text-mid text-xs font-black px-3 py-1.5 rounded-full">
                   {p.days}
                 </span>
               </div>
@@ -65,7 +55,7 @@ export default function PackagesPage() {
                     <p className="text-emerald-400 font-black text-[10px] uppercase tracking-wider mb-1">Included</p>
                     <p className="text-white/70 leading-relaxed">{p.inc}</p>
                   </div>
-                  <div className="bg-white/[.04] border border-white/[.07] rounded-xl px-4 py-3">
+                  <div className="bg-white/4 border border-white/[.07] rounded-xl px-4 py-3">
                     <p className="text-white/30 font-black text-[10px] uppercase tracking-wider mb-1">Excluded</p>
                     <p className="text-white/50 leading-relaxed">{p.exc}</p>
                   </div>
@@ -76,8 +66,14 @@ export default function PackagesPage() {
                     <p className="text-white/30 text-[11px] font-bold">Starting From</p>
                     <p className="text-gold font-black text-2xl" style={{ letterSpacing: "-0.03em" }}>{p.price}</p>
                   </div>
-                  <div className="flex gap-3">
-                    <Link href="/contact" className="bg-gold hover:bg-gold-deep text-[#0f172a] font-black text-sm px-5 py-2.5 rounded-full transition-all">
+                  <div className="flex gap-3 flex-wrap">
+                    <Link
+                      href={`/packages/${p.id}`}
+                      className="bg-white/7 hover:bg-white/13 border border-white/10 text-white font-black text-sm px-5 py-2.5 rounded-full transition-all"
+                    >
+                      View Details
+                    </Link>
+                    <Link href="/contact" className="bg-gold hover:bg-gold-deep text-mid font-black text-sm px-5 py-2.5 rounded-full transition-all">
                       Inquire Now
                     </Link>
                     <a
