@@ -43,7 +43,10 @@
       "Bash(mkdir -p public/photos)",
       "Bash(curl -sL -A \"Mozilla/5.0\" -o public/photos/munneswaram.jpg \"https://i0.wp.com/amazinglanka.com/wp/wp-content/uploads/2025/02/munneswaram-03.jpg?ssl=1\")",
       "Bash(echo \"exit=$?\")",
-      "Bash(ls -la public/photos/)"
+      "Bash(ls -la public/photos/)",
+      "Bash(rm -f components/ThemeToggle.tsx)",
+      "Bash(ls components/ThemeToggle.tsx)",
+      "PowerShell(cd \"c:\\\\WebProjects\\\\pearl-trail\"; Copy-Item \"PearlTrailLogo.png\" \"public\\\\logo.png\" -Force; Get-ChildItem public\\\\logo.png | Select-Object Name, @{N='KB';E={[math]::Round\\($_.Length/1KB\\)}} | Format-Table -AutoSize)"
     ]
   }
 }

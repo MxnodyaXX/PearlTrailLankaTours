@@ -5,6 +5,7 @@ import JourneySection  from "@/components/JourneySection";
 import ExperienceCards from "@/components/ExperienceCards";
 import TripPlanner     from "@/components/TripPlanner";
 import StatsBar        from "@/components/StatsBar";
+import GalleryMotion    from "@/components/GalleryMotion";
 import Testimonials    from "@/components/Testimonials";
 import FAQ             from "@/components/FAQ";
 import Footer          from "@/components/Footer";
@@ -20,6 +21,7 @@ export default function Home() {
       <ExperienceCards />
       <TripPlanner />
       <StatsBar />
+      <GalleryMotion />
       <Testimonials />
       <FAQ />
       <Footer />

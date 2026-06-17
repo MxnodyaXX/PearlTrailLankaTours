@@ -62,10 +62,8 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-10 md:mb-16">
           {/* Brand — full width on mobile */}
           <div className="col-span-2 md:col-span-1">
-            <p className="font-black text-xl mb-3">
-              Pearl<span className="text-gold">Trail</span>
-              <span className="block text-[10px] font-bold text-white/30 tracking-widest uppercase mt-0.5">Lanka Tours</span>
-            </p>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo.png" alt="PearlTrail Lanka Tours" className="h-14 w-auto mb-4" />
             <p className="text-white/50 text-[13px] leading-relaxed mb-4">
               Premium Sri Lanka tours, vehicle rentals, airport transfers, hotel bookings and complete travel assistance from Colombo.
             </p>

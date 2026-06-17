@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { label: "Discover",   href: "/discover" },
@@ -35,9 +34,9 @@ export default function Navbar() {
           }`}
       >
         {/* Logo */}
-        <Link href="/" className="text-xl font-black tracking-tight shrink-0 select-none">
-          Pearl<span className="text-gold">Trail</span>
-          <span className="text-[10px] font-bold text-white/40 ml-1 tracking-widest uppercase">Lanka</span>
+        <Link href="/" className="shrink-0 select-none flex items-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.png" alt="PearlTrail Lanka Tours" className="h-9 md:h-10 w-auto" />
         </Link>
 
         {/* Desktop links */}
@@ -55,7 +54,6 @@ export default function Navbar() {
 
         {/* Desktop CTAs */}
         <div className="hidden md:flex items-center gap-2 shrink-0">
-          <ThemeToggle />
           <a
             href="https://wa.me/94741838376"
             target="_blank"
@@ -77,7 +75,6 @@ export default function Navbar() {
 
         {/* Mobile controls */}
         <div className="md:hidden flex items-center gap-1.5">
-          <ThemeToggle />
           <button
             onClick={() => setOpen(!open)}
             className="flex flex-col gap-[5px] p-2"
