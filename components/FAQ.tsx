@@ -7,7 +7,7 @@ const faqs = [
   { q: "Do your vehicles come with drivers?",                   a: "Most vehicles are available with professional, English-speaking drivers who know Sri Lanka's roads and tourist sites." },
   { q: "Can you help with hotel bookings?",                     a: "Yes — from budget guesthouses to 5-star resorts and boutique villas, we find and book the right option for you." },
   { q: "Do you provide visa assistance?",                       a: "Yes — we guide you through Sri Lanka's tourist ETA process and help with travel document preparation." },
-  { q: "How do I make a booking?",                              a: "Contact us via WhatsApp (0741838376), fill in our inquiry form, or email pearltraillankatours@company.com. We respond within a few hours." },
+  { q: "How do I make a booking?",                              a: "Contact us via WhatsApp (0717179956), fill in our inquiry form, or email pearltraillankatours@gmail.com. We respond within a few hours." },
 ];
 
 export default function FAQ() {

@@ -415,7 +415,7 @@ function StoryFinal({ onChapter }: { onChapter?: (n: string, name: string) => vo
           <Link href="/packages" className="bg-gold hover:bg-gold-deep text-[#0f172a] font-black px-8 py-4 rounded-full text-sm transition-all hover:-translate-y-0.5 shadow-[0_14px_40px_rgba(246,185,59,.42)]">
             Begin Your Journey →
           </Link>
-          <a href="https://wa.me/94741838376" target="_blank" rel="noopener noreferrer"
+          <a href="https://wa.me/94717179956" target="_blank" rel="noopener noreferrer"
             className="bg-emerald-500 hover:bg-emerald-600 text-white font-black px-8 py-4 rounded-full text-sm transition-all hover:-translate-y-0.5">
             Talk to Us
           </a>

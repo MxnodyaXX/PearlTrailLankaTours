@@ -10,6 +10,24 @@ export interface DayPlan {
   stay: string;
 }
 
+/** A point on the route line, in the 664×936 map coordinate space. */
+export interface MapPoint { x: number; y: number }
+
+/** A named city marker tied to one or more itinerary days. */
+export interface MapStop {
+  x: number;
+  y: number;
+  label: string;
+  days: number[];
+  anchor?: "start" | "end"; // which side the label sits
+}
+
+/** A package's editable route map. */
+export interface PackageMap {
+  route: MapPoint[];
+  stops: MapStop[];
+}
+
 export interface TourPackage {
   id: string;
   title: string;
@@ -22,6 +40,7 @@ export interface TourPackage {
   exc: string;
   overview: string;
   itinerary: DayPlan[];
+  map?: PackageMap;
 }
 
 export const packages: TourPackage[] = [

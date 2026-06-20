@@ -48,7 +48,7 @@ export default function Footer() {
               Request a Quote
             </Link>
             <a
-              href="https://wa.me/94741838376"
+              href="https://wa.me/94717179956"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-emerald-500 hover:bg-emerald-600 text-white font-black text-sm px-5 py-3 md:px-6 md:py-3.5 rounded-full transition-all"
@@ -112,10 +112,10 @@ export default function Footer() {
           <div>
             <p className="text-[10px] font-black uppercase tracking-[.18em] text-white/30 mb-3 md:mb-4">Contact Us</p>
             <ul className="flex flex-col gap-2.5 text-[13px] text-white/55">
-              <li><a href="tel:+94741838376" className="hover:text-gold transition-colors">0741 838 376</a></li>
-              <li><a href="https://wa.me/94741838376" className="hover:text-gold transition-colors">WhatsApp Us</a></li>
-              <li><a href="mailto:mxnodya.00@gmail.com" className="hover:text-gold transition-colors break-all">mxnodya.00@gmail.com</a></li>
-              <li><a href="mailto:pearltraillankatours@company.com" className="hover:text-gold transition-colors break-all">pearltraillankatours@company.com</a></li>
+              <li><a href="tel:+94717179956" className="hover:text-gold transition-colors">+94 71 717 9956</a></li>
+              <li><a href="https://wa.me/94717179956" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">WhatsApp</a></li>
+              <li><a href="https://t.me/+94717179956" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Telegram</a></li>
+              <li><a href="mailto:pearltraillankatours@gmail.com" className="hover:text-gold transition-colors break-all">pearltraillankatours@gmail.com</a></li>
               <li className="text-white/40">Colombo, Sri Lanka</li>
             </ul>
           </div>

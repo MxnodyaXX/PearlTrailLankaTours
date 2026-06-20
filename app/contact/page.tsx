@@ -35,11 +35,11 @@ export default function ContactPage() {
             <p className="text-white/50 text-sm mb-7">Reach out — we respond within a few hours and are happy to help with any travel query.</p>
 
             {[
-              { ico:"📞", label:"Phone / Call",    val:"0741 838 376", href:"tel:+94741838376" },
-              { ico:"💬", label:"WhatsApp",         val:"0741 838 376", href:"https://wa.me/94741838376" },
-              { ico:"📧", label:"Personal Email",   val:"mxnodya.00@gmail.com", href:"mailto:mxnodya.00@gmail.com" },
-              { ico:"📨", label:"Company Email",    val:"pearltraillankatours@company.com", href:"mailto:pearltraillankatours@company.com" },
-              { ico:"📍", label:"Location",         val:"Colombo, Sri Lanka", href:"#" },
+              { ico:"📞", label:"Phone / Call",  val:"+94 71 717 9956", href:"tel:+94717179956" },
+              { ico:"💬", label:"WhatsApp",       val:"+94 71 717 9956", href:"https://wa.me/94717179956" },
+              { ico:"✈️", label:"Telegram",       val:"+94 71 717 9956", href:"https://t.me/+94717179956" },
+              { ico:"📧", label:"Email",          val:"pearltraillankatours@gmail.com", href:"mailto:pearltraillankatours@gmail.com" },
+              { ico:"📍", label:"Location",       val:"Colombo, Sri Lanka", href:"#" },
             ].map((c) => (
               <a key={c.label} href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer"
                 className="flex items-start gap-3.5 mb-4 group">

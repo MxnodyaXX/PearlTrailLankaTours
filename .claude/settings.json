@@ -46,7 +46,10 @@
       "Bash(ls -la public/photos/)",
       "Bash(rm -f components/ThemeToggle.tsx)",
       "Bash(ls components/ThemeToggle.tsx)",
-      "PowerShell(cd \"c:\\\\WebProjects\\\\pearl-trail\"; Copy-Item \"PearlTrailLogo.png\" \"public\\\\logo.png\" -Force; Get-ChildItem public\\\\logo.png | Select-Object Name, @{N='KB';E={[math]::Round\\($_.Length/1KB\\)}} | Format-Table -AutoSize)"
+      "PowerShell(cd \"c:\\\\WebProjects\\\\pearl-trail\"; Copy-Item \"PearlTrailLogo.png\" \"public\\\\logo.png\" -Force; Get-ChildItem public\\\\logo.png | Select-Object Name, @{N='KB';E={[math]::Round\\($_.Length/1KB\\)}} | Format-Table -AutoSize)",
+      "Bash(xargs grep -l \"middleware.ts\\\\|middleware.js\")",
+      "Bash(xargs grep -l \"^# Middleware\\\\|^## Middleware\\\\|middleware.ts\\\\|middleware.js\")",
+      "Bash(grep -n \"env\" .gitignore)"
     ]
   }
 }

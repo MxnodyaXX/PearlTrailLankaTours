@@ -83,7 +83,7 @@ export default function TravelAssistancePage() {
         <p className="text-white/60 mb-8 max-w-md mx-auto">Get in touch and we'll handle everything — from airport arrival to your final departure.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/contact" className="bg-gold hover:bg-gold-deep text-[#0f172a] font-black px-7 py-3.5 rounded-full text-sm transition-all">Send Inquiry</Link>
-          <a href="https://wa.me/94741838376" target="_blank" rel="noopener noreferrer"
+          <a href="https://wa.me/94717179956" target="_blank" rel="noopener noreferrer"
             className="bg-emerald-500 hover:bg-emerald-600 text-white font-black px-7 py-3.5 rounded-full text-sm transition-all">WhatsApp Us</a>
         </div>
       </section>

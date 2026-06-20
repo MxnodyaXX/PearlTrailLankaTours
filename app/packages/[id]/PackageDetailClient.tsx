@@ -17,6 +17,10 @@ export default function PackageDetailClient({ pkg }: { pkg: TourPackage }) {
   const heroImgRef = useRef<HTMLImageElement>(null);
 
   const hasItinerary = pkg.itinerary.length > 0;
+  // Show the animated map for the code-managed Sacred Circuit, OR any package
+  // that has a saved map (route + at least one stop) from the admin editor.
+  const savedMap = pkg.map && pkg.map.route.length > 1 && pkg.map.stops.length > 0 ? pkg.map : null;
+  const hasMap = pkg.id === "sacred-circuit" || !!savedMap;
   const waText = encodeURIComponent(`I'm interested in the ${pkg.title}`);
   const stops = hasItinerary ? pkg.itinerary.length : pkg.desc.split(" · ").length;
 
@@ -69,7 +73,7 @@ export default function PackageDetailClient({ pkg }: { pkg: TourPackage }) {
           <p className="text-white/60 text-base md:text-xl max-w-xl mb-9 leading-relaxed">{pkg.tagline}</p>
           <div className="flex flex-wrap gap-3">
             <Link href="/contact" className="bg-gold hover:bg-gold-deep text-[#0f172a] font-black text-sm px-6 py-3 rounded-full transition-all">Inquire Now</Link>
-            <a href={`https://wa.me/94741838376?text=${waText}`} target="_blank" rel="noopener noreferrer" className="bg-emerald-500 hover:bg-emerald-600 text-white font-black text-sm px-6 py-3 rounded-full transition-all">WhatsApp Us</a>
+            <a href={`https://wa.me/94717179956?text=${waText}`} target="_blank" rel="noopener noreferrer" className="bg-emerald-500 hover:bg-emerald-600 text-white font-black text-sm px-6 py-3 rounded-full transition-all">WhatsApp Us</a>
             <Link href="/packages" className="bg-white/[.08] hover:bg-white/[.14] border border-white/[.12] text-white font-black text-sm px-6 py-3 rounded-full transition-all">← All Tours</Link>
           </div>
         </div>
@@ -126,7 +130,7 @@ export default function PackageDetailClient({ pkg }: { pkg: TourPackage }) {
       </section>
 
       {/* ── DAY-BY-DAY GUIDE (map-synced) ──────────────────────── */}
-      {hasItinerary && <RouteMapSection days={pkg.itinerary} />}
+      {hasMap && <RouteMapSection days={pkg.itinerary} route={savedMap?.route} stops={savedMap?.stops} />}
 
       {/* ── BOOK CTA ───────────────────────────────────────────── */}
       <section className="bg-[#020617] py-24 md:py-28 px-6 md:px-16 text-center border-t border-white/[.06]">
@@ -138,7 +142,7 @@ export default function PackageDetailClient({ pkg }: { pkg: TourPackage }) {
           </p>
           <div className="reveal flex flex-wrap gap-4 justify-center">
             <Link href="/contact" className="bg-gold hover:bg-gold-deep text-[#0f172a] font-black text-sm px-8 py-3.5 rounded-full transition-all">Send an Enquiry</Link>
-            <a href={`https://wa.me/94741838376?text=${waText}`} target="_blank" rel="noopener noreferrer" className="bg-emerald-500 hover:bg-emerald-600 text-white font-black text-sm px-8 py-3.5 rounded-full transition-all">Chat on WhatsApp</a>
+            <a href={`https://wa.me/94717179956?text=${waText}`} target="_blank" rel="noopener noreferrer" className="bg-emerald-500 hover:bg-emerald-600 text-white font-black text-sm px-8 py-3.5 rounded-full transition-all">Chat on WhatsApp</a>
             <Link href="/packages" className="bg-white/[.06] hover:bg-white/[.1] border border-white/[.09] text-white font-black text-sm px-8 py-3.5 rounded-full transition-all">View All Tours</Link>
           </div>
         </div>

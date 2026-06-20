@@ -55,7 +55,7 @@ export default function Navbar() {
         {/* Desktop CTAs */}
         <div className="hidden md:flex items-center gap-2 shrink-0">
           <a
-            href="https://wa.me/94741838376"
+            href="https://wa.me/94717179956"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 bg-emerald-500 hover:bg-emerald-600 text-white text-[11px] font-black px-3.5 py-2 rounded-full transition-colors"
@@ -113,7 +113,7 @@ export default function Navbar() {
             Plan My Trip
           </Link>
           <a
-            href="https://wa.me/94741838376"
+            href="https://wa.me/94717179956"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-emerald-500 text-white font-black text-sm px-5 py-3 rounded-full text-center"
