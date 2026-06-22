@@ -1,4 +1,6 @@
 "use client";
+import { useSettings } from "@/components/SettingsProvider";
+import { waHref } from "@/lib/site-config";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
@@ -36,6 +38,7 @@ const SCENE_VH = 90;           // scroll length per scene
 const clamp = (v: number, a: number, b: number) => Math.max(a, Math.min(b, v));
 
 export default function CinematicJourney() {
+  const settings = useSettings();
   const wrapRef  = useRef<HTMLDivElement>(null);
   const sceneRefs = useRef<(HTMLDivElement | null)[]>([]);
   const bgRefs    = useRef<(HTMLDivElement | null)[]>([]);
@@ -183,7 +186,7 @@ export default function CinematicJourney() {
                 <Link href="/packages" className="bg-gold hover:bg-gold-deep text-[#0f172a] font-black px-8 py-4 rounded-full text-sm transition-all hover:-translate-y-0.5 shadow-[0_14px_40px_rgba(246,185,59,.42)]">
                   Begin Your Journey →
                 </Link>
-                <a href="https://wa.me/94717179956" target="_blank" rel="noopener noreferrer"
+                <a href={waHref(settings)} target="_blank" rel="noopener noreferrer"
                   className="bg-emerald-500 hover:bg-emerald-600 text-white font-black px-8 py-4 rounded-full text-sm transition-all hover:-translate-y-0.5">
                   Talk to Us
                 </a>

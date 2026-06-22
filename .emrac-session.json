@@ -1,9 +1,9 @@
 {
-  "lastUpdated": 1781934960492,
+  "lastUpdated": 1782114528395,
   "current": {
-    "ts": 1781934960492,
+    "ts": 1782114528395,
     "startTime": 1781839535364,
-    "endTime": 1781934960492,
+    "endTime": 1782114528395,
     "layer": "api",
     "activeFile": "supabase\\schema.sql",
     "openTabs": [
@@ -23,19 +23,19 @@
         "file": "app\\contact\\page.tsx",
         "editCount": 0,
         "firstEdit": 1781840157995,
-        "lastEdit": 1781840157995
+        "lastEdit": 1782109749019
       },
       {
         "file": "components\\Footer.tsx",
         "editCount": 0,
         "firstEdit": 1781840176929,
-        "lastEdit": 1781840176929
+        "lastEdit": 1782109324274
       },
       {
         "file": "app\\packages\\page.tsx",
         "editCount": 0,
         "firstEdit": 1781841558199,
-        "lastEdit": 1781841821765
+        "lastEdit": 1782109767867
       },
       {
         "file": "app\\packages\\[id]\\page.tsx",
@@ -59,7 +59,7 @@
         "file": "supabase\\schema.sql",
         "editCount": 0,
         "firstEdit": 1781845069329,
-        "lastEdit": 1781859055493
+        "lastEdit": 1782112500759
       },
       {
         "file": "lib\\supabase\\browser.ts",
@@ -79,9 +79,9 @@
   },
   "history": [
     {
-      "ts": 1781934960492,
+      "ts": 1782114528395,
       "startTime": 1781839535364,
-      "endTime": 1781934960492,
+      "endTime": 1782114528395,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -101,19 +101,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -137,7 +137,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782112500759
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -156,9 +156,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781934949388,
+      "ts": 1782114426687,
       "startTime": 1781839535364,
-      "endTime": 1781934949388,
+      "endTime": 1782114426687,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -178,19 +178,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -214,7 +214,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782112500759
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -233,9 +233,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781934778048,
+      "ts": 1782114228392,
       "startTime": 1781839535364,
-      "endTime": 1781934778048,
+      "endTime": 1782114228392,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -255,19 +255,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -291,7 +291,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782112500759
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -310,9 +310,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781934709357,
+      "ts": 1782113930883,
       "startTime": 1781839535364,
-      "endTime": 1781934709357,
+      "endTime": 1782113930883,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -332,19 +332,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -368,7 +368,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782112500759
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -387,9 +387,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781934649373,
+      "ts": 1782113928383,
       "startTime": 1781839535364,
-      "endTime": 1781934649373,
+      "endTime": 1782113928383,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -409,19 +409,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -445,7 +445,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782112500759
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -464,9 +464,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781934514499,
+      "ts": 1782113813597,
       "startTime": 1781839535364,
-      "endTime": 1781934514499,
+      "endTime": 1782113813597,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -486,19 +486,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -522,7 +522,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782112500759
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -541,9 +541,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781934512518,
+      "ts": 1782113725971,
       "startTime": 1781839535364,
-      "endTime": 1781934512518,
+      "endTime": 1782113725971,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -563,19 +563,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -599,7 +599,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782112500759
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -618,9 +618,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781934490278,
+      "ts": 1782113628040,
       "startTime": 1781839535364,
-      "endTime": 1781934490278,
+      "endTime": 1782113628040,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -640,19 +640,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -676,7 +676,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782112500759
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -695,9 +695,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781934463165,
+      "ts": 1782113328029,
       "startTime": 1781839535364,
-      "endTime": 1781934463165,
+      "endTime": 1782113328029,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -717,19 +717,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -753,7 +753,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782112500759
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -772,9 +772,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781934460533,
+      "ts": 1782113288691,
       "startTime": 1781839535364,
-      "endTime": 1781934460533,
+      "endTime": 1782113288691,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -794,19 +794,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -830,7 +830,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782112500759
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -849,9 +849,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781934349377,
+      "ts": 1782113219816,
       "startTime": 1781839535364,
-      "endTime": 1781934349377,
+      "endTime": 1782113219816,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -871,19 +871,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -907,7 +907,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782112500759
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -926,9 +926,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781871936338,
+      "ts": 1782113079225,
       "startTime": 1781839535364,
-      "endTime": 1781871936338,
+      "endTime": 1782113079225,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -948,19 +948,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -984,7 +984,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782112500759
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -1003,9 +1003,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781871636326,
+      "ts": 1782113042734,
       "startTime": 1781839535364,
-      "endTime": 1781871636326,
+      "endTime": 1782113042734,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1025,19 +1025,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -1061,7 +1061,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782112500759
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -1080,9 +1080,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781871336322,
+      "ts": 1782113041006,
       "startTime": 1781839535364,
-      "endTime": 1781871336322,
+      "endTime": 1782113041006,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1102,19 +1102,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -1138,7 +1138,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782112500759
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -1157,9 +1157,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781871036314,
+      "ts": 1782113039563,
       "startTime": 1781839535364,
-      "endTime": 1781871036314,
+      "endTime": 1782113039563,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1179,19 +1179,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -1215,7 +1215,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782112500759
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -1234,9 +1234,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781870736315,
+      "ts": 1782113028027,
       "startTime": 1781839535364,
-      "endTime": 1781870736315,
+      "endTime": 1782113028027,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1256,19 +1256,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -1292,7 +1292,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782112500759
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -1311,9 +1311,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781870436300,
+      "ts": 1782113008810,
       "startTime": 1781839535364,
-      "endTime": 1781870436300,
+      "endTime": 1782113008810,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1333,19 +1333,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -1369,7 +1369,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782112500759
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -1388,9 +1388,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781870136296,
+      "ts": 1782112728023,
       "startTime": 1781839535364,
-      "endTime": 1781870136296,
+      "endTime": 1782112728023,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1410,19 +1410,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -1446,7 +1446,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782112500759
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -1465,9 +1465,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781869836295,
+      "ts": 1782112582837,
       "startTime": 1781839535364,
-      "endTime": 1781869836295,
+      "endTime": 1782112582837,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1487,19 +1487,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -1523,7 +1523,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782112500759
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -1542,9 +1542,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781869536284,
+      "ts": 1782112428020,
       "startTime": 1781839535364,
-      "endTime": 1781869536284,
+      "endTime": 1782112428020,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1564,19 +1564,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -1600,7 +1600,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782109228172
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -1619,9 +1619,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781869236275,
+      "ts": 1782112128005,
       "startTime": 1781839535364,
-      "endTime": 1781869236275,
+      "endTime": 1782112128005,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1641,19 +1641,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -1677,7 +1677,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782109228172
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -1696,9 +1696,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781868936264,
+      "ts": 1782111828000,
       "startTime": 1781839535364,
-      "endTime": 1781868936264,
+      "endTime": 1782111828000,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1718,19 +1718,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -1754,7 +1754,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782109228172
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -1773,9 +1773,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781868636252,
+      "ts": 1782111595656,
       "startTime": 1781839535364,
-      "endTime": 1781868636252,
+      "endTime": 1782111595656,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1795,19 +1795,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -1831,7 +1831,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782109228172
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -1850,9 +1850,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781868336246,
+      "ts": 1782111584718,
       "startTime": 1781839535364,
-      "endTime": 1781868336246,
+      "endTime": 1782111584718,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1872,19 +1872,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -1908,7 +1908,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782109228172
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -1927,9 +1927,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781868036246,
+      "ts": 1782111527983,
       "startTime": 1781839535364,
-      "endTime": 1781868036246,
+      "endTime": 1782111527983,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1949,19 +1949,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -1985,7 +1985,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782109228172
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -2004,9 +2004,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781867736244,
+      "ts": 1782111227983,
       "startTime": 1781839535364,
-      "endTime": 1781867736244,
+      "endTime": 1782111227983,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -2026,19 +2026,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -2062,7 +2062,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782109228172
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -2081,9 +2081,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781867436229,
+      "ts": 1782110927976,
       "startTime": 1781839535364,
-      "endTime": 1781867436229,
+      "endTime": 1782110927976,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -2103,19 +2103,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -2139,7 +2139,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782109228172
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -2158,9 +2158,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781867136219,
+      "ts": 1782110848750,
       "startTime": 1781839535364,
-      "endTime": 1781867136219,
+      "endTime": 1782110848750,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -2180,19 +2180,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -2216,7 +2216,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782109228172
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -2235,9 +2235,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781866836218,
+      "ts": 1782110627975,
       "startTime": 1781839535364,
-      "endTime": 1781866836218,
+      "endTime": 1782110627975,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -2257,19 +2257,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -2293,7 +2293,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782109228172
         },
         {
           "file": "lib\\supabase\\browser.ts",
@@ -2312,9 +2312,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1781866536206,
+      "ts": 1782110327958,
       "startTime": 1781839535364,
-      "endTime": 1781866536206,
+      "endTime": 1782110327958,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -2334,19 +2334,19 @@
           "file": "app\\contact\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781840157995,
-          "lastEdit": 1781840157995
+          "lastEdit": 1782109749019
         },
         {
           "file": "components\\Footer.tsx",
           "editCount": 0,
           "firstEdit": 1781840176929,
-          "lastEdit": 1781840176929
+          "lastEdit": 1782109324274
         },
         {
           "file": "app\\packages\\page.tsx",
           "editCount": 0,
           "firstEdit": 1781841558199,
-          "lastEdit": 1781841821765
+          "lastEdit": 1782109767867
         },
         {
           "file": "app\\packages\\[id]\\page.tsx",
@@ -2370,7 +2370,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1781859055493
+          "lastEdit": 1782109228172
         },
         {
           "file": "lib\\supabase\\browser.ts",

@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useSettings } from "@/components/SettingsProvider";
+import { waHref } from "@/lib/site-config";
 
 const links = [
   { label: "Discover",   href: "/discover" },
@@ -14,6 +16,7 @@ const links = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const settings = useSettings();
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 40);
@@ -55,7 +58,7 @@ export default function Navbar() {
         {/* Desktop CTAs */}
         <div className="hidden md:flex items-center gap-2 shrink-0">
           <a
-            href="https://wa.me/94717179956"
+            href={waHref(settings)}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 bg-emerald-500 hover:bg-emerald-600 text-white text-[11px] font-black px-3.5 py-2 rounded-full transition-colors"
@@ -113,7 +116,7 @@ export default function Navbar() {
             Plan My Trip
           </Link>
           <a
-            href="https://wa.me/94717179956"
+            href={waHref(settings)}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-emerald-500 text-white font-black text-sm px-5 py-3 rounded-full text-center"

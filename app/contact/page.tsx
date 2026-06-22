@@ -4,9 +4,20 @@ import PageHero      from "@/components/PageHero";
 import Footer        from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { useState }  from "react";
+import { useSettings } from "@/components/SettingsProvider";
+import { waHref, telHref, tgHref, mailHref, socialLinks } from "@/lib/site-config";
 
 export default function ContactPage() {
   const [status, setStatus] = useState<"idle"|"sending"|"sent">("idle");
+  const s = useSettings();
+  const tg = tgHref(s);
+  const contacts = [
+    { ico: "📞", label: "Phone / Call", val: s.phone, href: telHref(s) },
+    { ico: "💬", label: "WhatsApp", val: s.phone, href: waHref(s) },
+    ...(tg ? [{ ico: "✈️", label: "Telegram", val: s.phone, href: tg }] : []),
+    { ico: "📧", label: "Email", val: s.email, href: mailHref(s) },
+    { ico: "📍", label: "Location", val: s.address, href: "#" },
+  ];
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,13 +45,7 @@ export default function ContactPage() {
             <h3 className="font-black text-2xl mb-1" style={{ letterSpacing: "-0.02em" }}>Let's plan your perfect trip</h3>
             <p className="text-white/50 text-sm mb-7">Reach out — we respond within a few hours and are happy to help with any travel query.</p>
 
-            {[
-              { ico:"📞", label:"Phone / Call",  val:"+94 71 717 9956", href:"tel:+94717179956" },
-              { ico:"💬", label:"WhatsApp",       val:"+94 71 717 9956", href:"https://wa.me/94717179956" },
-              { ico:"✈️", label:"Telegram",       val:"+94 71 717 9956", href:"https://t.me/+94717179956" },
-              { ico:"📧", label:"Email",          val:"pearltraillankatours@gmail.com", href:"mailto:pearltraillankatours@gmail.com" },
-              { ico:"📍", label:"Location",       val:"Colombo, Sri Lanka", href:"#" },
-            ].map((c) => (
+            {contacts.map((c) => (
               <a key={c.label} href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer"
                 className="flex items-start gap-3.5 mb-4 group">
                 <div className="w-10 h-10 bg-gold/10 border border-gold/20 rounded-xl flex items-center justify-center text-lg shrink-0 group-hover:bg-gold/20 transition-colors">{c.ico}</div>
@@ -52,10 +57,10 @@ export default function ContactPage() {
             ))}
 
             <div className="flex gap-2 mt-6">
-              {[["facebook.com/pearltraillankatours","FB"],["instagram.com/pearltraillankatours","IG"],["tiktok.com/@pearltraillankatours","TT"],["youtube.com/@pearltraillankatours","YT"]].map(([href, label]) => (
-                <a key={label} href={`https://${href}`} target="_blank" rel="noopener noreferrer"
+              {socialLinks(s).map((soc) => (
+                <a key={soc.label} href={soc.href} target="_blank" rel="noopener noreferrer"
                   className="w-9 h-9 bg-white/[.05] hover:bg-gold rounded-full flex items-center justify-center text-[10px] font-black text-white hover:text-[#0f172a] transition-all">
-                  {label}
+                  {soc.short}
                 </a>
               ))}
             </div>

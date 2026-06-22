@@ -1,9 +1,12 @@
 "use client";
+import { useSettings } from "@/components/SettingsProvider";
+import { waHref } from "@/lib/site-config";
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 
 export default function Hero() {
+  const settings = useSettings();
   const bgRef    = useRef<HTMLDivElement>(null);
   const midRef   = useRef<HTMLDivElement>(null);
   const mistRef  = useRef<HTMLDivElement>(null);
@@ -154,7 +157,7 @@ export default function Hero() {
             Plan My Trip
           </Link>
           <a
-            href="https://wa.me/94717179956"
+            href={waHref(settings)}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-emerald-500 hover:bg-emerald-600 text-white font-black px-6 py-3.5 rounded-full text-sm transition-all hover:-translate-y-0.5 flex items-center gap-2"

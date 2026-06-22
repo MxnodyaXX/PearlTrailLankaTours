@@ -119,10 +119,10 @@ export default function VehicleHero() {
       <div
         ref={contentRef}
         className="relative will-change-transform flex flex-col justify-center
-          px-5 md:px-10 lg:px-16
+          px-5 md:px-10 lg:pr-10 lg:pl-[clamp(64px,9vw,200px)]
           pt-[clamp(100px,16vh,140px)]
           pb-[clamp(80px,12vh,110px)]
-          w-full lg:w-[52%]"
+          w-full lg:w-[58%]"
         style={{ zIndex: 10, minHeight: "100svh" }}
       >
         {/* Kicker */}

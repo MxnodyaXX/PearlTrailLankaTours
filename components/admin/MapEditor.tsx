@@ -19,14 +19,17 @@ function fromMap(map?: PackageMap): Pt[] {
   });
 }
 
+const parseDays = (s: string) =>
+  s.split(",").map((d) => parseInt(d.trim(), 10)).filter((d) => !isNaN(d)).sort((a, b) => a - b);
+
 function toMap(pts: Pt[]): PackageMap {
   return {
     route: pts.map((p) => ({ x: p.x, y: p.y })),
+    // A point is a "stop" (day destination) when it has a day assigned or a name.
     stops: pts
-      .filter((p) => p.label.trim())
+      .filter((p) => p.label.trim() || parseDays(p.days).length > 0)
       .map((p) => ({
-        x: p.x, y: p.y, label: p.label.trim(), anchor: p.anchor,
-        days: p.days.split(",").map((d) => parseInt(d.trim(), 10)).filter((d) => !isNaN(d)),
+        x: p.x, y: p.y, label: p.label.trim(), anchor: p.anchor, days: parseDays(p.days),
       })),
   };
 }
@@ -65,17 +68,28 @@ export default function MapEditor({
     const j = i + dir; if (j < 0 || j >= pts.length) return;
     const n = [...pts]; [n[i], n[j]] = [n[j], n[i]]; commit(n);
   };
+  const toggleDay = (i: number, day: number) => {
+    const set = new Set(parseDays(pts[i].days));
+    set.has(day) ? set.delete(day) : set.add(day);
+    update(i, { days: Array.from(set).sort((a, b) => a - b).join(",") });
+  };
 
   const placed = pts;
   const previewPath = smoothPath(placed.map((p) => ({ x: p.x, y: p.y })));
 
+  // Which days already have a destination point (to flag gaps)
+  const assignedDays = new Set<number>();
+  placed.forEach((p) => parseDays(p.days).forEach((d) => assignedDays.add(d)));
+  const allDays = Array.from({ length: dayCount }, (_, k) => k + 1);
+  const missingDays = allDays.filter((d) => !assignedDays.has(d));
+
   return (
-    <div className="grid md:grid-cols-[minmax(0,340px)_1fr] gap-5 items-start">
-      {/* ── Map (left, mirrors the detail-page placement) ──────────── */}
-      <div className="rounded-xl overflow-hidden border border-white/10"
-        style={{ background: "radial-gradient(ellipse 72% 58% at 50% 46%, rgba(34,64,104,0.28) 0%, transparent 70%)" }}>
+    <div className="flex flex-col lg:flex-row gap-4 items-stretch">
+      {/* ── Map (left, sized like the package detail page — full height) ── */}
+      <div className="relative flex-1 rounded-xl overflow-hidden border border-white/10 min-h-[58vh]"
+        style={{ background: "radial-gradient(ellipse 72% 58% at 50% 46%, rgba(34,64,104,0.28) 0%, transparent 70%)", height: "calc(100vh - 210px)" }}>
         <svg ref={svgRef} viewBox="0 0 664 936" preserveAspectRatio="xMidYMid meet"
-          style={{ display: "block", width: "100%", height: "auto", cursor: "crosshair", touchAction: "none" }}
+          style={{ display: "block", width: "100%", height: "100%", cursor: "crosshair", touchAction: "none" }}
           onClick={onMapClick}
           onMouseMove={(e) => { const l = toView(e.clientX, e.clientY); if (l) setCursor(l); }}
           onMouseLeave={() => setCursor(null)}>
@@ -110,18 +124,43 @@ export default function MapEditor({
             </g>
           )}
         </svg>
-        <div className="px-3 py-2 text-[11px] font-mono text-white/45 border-t border-white/10">
+        <div className="absolute bottom-0 inset-x-0 px-3 py-1.5 text-[11px] font-mono text-white/55 bg-black/40 border-t border-white/10 backdrop-blur-sm">
           {cursor ? `${cursor.x}, ${cursor.y}` : "—"} · {placed.length} points
         </div>
       </div>
 
       {/* ── Points (right) ─────────────────────────────────────────── */}
-      <div>
-        <p className="text-white/50 text-xs mb-3">
-          Click the map to drop points <b>in travel order</b> (add bends to keep the line on land).
-          Give a point a <b>name</b> + <b>day(s)</b> to make it a stop. Selected a row? Your next click <b>moves</b> it.
-          {dayCount > 0 && <> This tour has <b>{dayCount} day{dayCount === 1 ? "" : "s"}</b>.</>}
+      <div className="lg:w-[330px] shrink-0">
+        <p className="text-white/50 text-xs mb-3 leading-relaxed">
+          Click the map to drop points <b>in travel order</b> — including corners, so the line stays on land.
+          For the points that are a <b className="text-gold">day&apos;s destination</b>, tap its day number below
+          (Day&nbsp;1 → point&nbsp;1, Day&nbsp;2 → point&nbsp;5…). Untagged points are just route shape.
+          Selected a row? Your next map click <b>moves</b> it.
         </p>
+
+        {/* Day → point coverage */}
+        {dayCount > 0 && (
+          <div className="mb-3 rounded-lg border border-white/10 bg-white/[.03] px-3 py-2.5">
+            <p className="text-[10px] font-bold uppercase tracking-[.14em] text-white/45 mb-1.5">Day coverage</p>
+            <div className="flex flex-wrap gap-1">
+              {allDays.map((day) => {
+                const has = assignedDays.has(day);
+                return (
+                  <span key={day} title={has ? `Day ${day} has a point` : `Day ${day} has no point yet`}
+                    className="w-6 h-6 rounded grid place-items-center text-[11px] font-black"
+                    style={{ background: has ? "#f6b93b" : "rgba(255,255,255,0.06)", color: has ? "#0b1220" : "rgba(255,255,255,0.4)" }}>
+                    {day}
+                  </span>
+                );
+              })}
+            </div>
+            {missingDays.length > 0 && (
+              <p className="text-[11px] mt-1.5" style={{ color: "#fbbf24" }}>
+                No point yet for day{missingDays.length > 1 ? "s" : ""} {missingDays.join(", ")}.
+              </p>
+            )}
+          </div>
+        )}
 
         {selected != null && (
           <p className="mb-3 text-xs font-black px-3 py-1.5 rounded inline-block" style={{ background: "rgba(246,185,59,.16)", color: "#f6b93b" }}>
@@ -129,33 +168,48 @@ export default function MapEditor({
           </p>
         )}
 
-        <div className="flex flex-col gap-1.5 max-h-[460px] overflow-auto pr-1">
+        <div className="flex flex-col gap-1.5 max-h-[calc(100vh-260px)] overflow-auto pr-1">
           {placed.length === 0 && <p className="text-white/35 text-sm py-6 text-center border border-white/10 rounded-lg">Click the map to start the route.</p>}
           {placed.map((p, i) => {
             const isSel = i === selected;
+            const pDays = parseDays(p.days);
+            const isStop = pDays.length > 0 || p.label.trim();
             return (
               <div key={i} className="rounded-lg px-2.5 py-2"
                 style={{ background: isSel ? "rgba(246,185,59,.14)" : "rgba(255,255,255,0.04)", border: `1px solid ${isSel ? "rgba(246,185,59,.4)" : "rgba(255,255,255,0.08)"}` }}>
                 <div className="flex items-center gap-2">
                   <span className="w-6 h-6 rounded-full grid place-items-center text-[11px] font-black shrink-0"
-                    style={{ background: p.label.trim() ? "#f6b93b" : "rgba(255,255,255,0.12)", color: p.label.trim() ? "#0b1220" : "#fff" }}>{i + 1}</span>
-                  <input value={p.label} onChange={(e) => update(i, { label: e.target.value })} placeholder="(bend — name to make a stop)"
-                    className="flex-1 bg-transparent border-b border-white/10 focus:border-white/30 outline-none text-sm py-1 text-white" />
-                  <span className="font-mono text-[11px] text-white/40 w-16 text-right">{p.x},{p.y}</span>
+                    style={{ background: isStop ? "#f6b93b" : "rgba(255,255,255,0.12)", color: isStop ? "#0b1220" : "#fff" }}>{i + 1}</span>
+                  <input value={p.label} onChange={(e) => update(i, { label: e.target.value })} placeholder="(corner — name optional)"
+                    className="flex-1 bg-transparent border-b border-white/10 focus:border-white/30 outline-none text-sm py-1 text-white min-w-0" />
+                  <span className="font-mono text-[11px] text-white/40 w-14 text-right shrink-0">{p.x},{p.y}</span>
                   <button type="button" onClick={() => setSelected(isSel ? null : i)} title="Move" className="text-white/40 hover:text-gold text-xs px-1">✎</button>
                   <button type="button" onClick={() => move(i, -1)} className="text-white/40 hover:text-white text-xs px-1">▲</button>
                   <button type="button" onClick={() => move(i, 1)} className="text-white/40 hover:text-white text-xs px-1">▼</button>
                   <button type="button" onClick={() => del(i)} className="text-red-300/70 hover:text-red-300 text-xs px-1">✕</button>
                 </div>
-                {p.label.trim() && (
-                  <div className="flex items-center gap-2 mt-2 pl-8">
-                    <input value={p.days} onChange={(e) => update(i, { days: e.target.value })} placeholder="day(s) e.g. 2,3"
-                      className="w-28 bg-white/5 border border-white/10 rounded px-2 py-1 text-white text-[11px] outline-none" />
-                    <select value={p.anchor} onChange={(e) => update(i, { anchor: e.target.value as "start" | "end" })}
-                      className="bg-white/5 border border-white/10 rounded px-2 py-1 text-white text-[11px] outline-none">
-                      <option value="start">label right</option>
-                      <option value="end">label left</option>
-                    </select>
+
+                {/* Day assignment — tap the day(s) this point is the destination for */}
+                {dayCount > 0 && (
+                  <div className="mt-2 pl-8 flex flex-wrap items-center gap-1">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-white/35 mr-0.5">Day</span>
+                    {allDays.map((day) => {
+                      const on = pDays.includes(day);
+                      return (
+                        <button key={day} type="button" onClick={() => toggleDay(i, day)}
+                          className="w-5 h-5 rounded grid place-items-center text-[10px] font-black transition-colors"
+                          style={{ background: on ? "#f6b93b" : "rgba(255,255,255,0.06)", color: on ? "#0b1220" : "rgba(255,255,255,0.45)" }}>
+                          {day}
+                        </button>
+                      );
+                    })}
+                    {p.label.trim() && (
+                      <select value={p.anchor} onChange={(e) => update(i, { anchor: e.target.value as "start" | "end" })}
+                        className="ml-1 bg-white/5 border border-white/10 rounded px-1.5 py-0.5 text-white text-[10px] outline-none">
+                        <option value="start">label →</option>
+                        <option value="end">← label</option>
+                      </select>
+                    )}
                   </div>
                 )}
               </div>

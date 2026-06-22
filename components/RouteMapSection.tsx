@@ -47,7 +47,10 @@ function SriLankaMap({
   const goldRef = useRef<SVGPathElement>(null);
   const headRef = useRef<SVGGElement>(null);
   const smooth = useMemo(() => smoothPath(route), [route]);
-  const activeDestIdx = stops.findIndex((d) => d.days.includes(activeDay));
+  const anyTagged = stops.some((s) => Array.isArray(s.days) && s.days.length > 0);
+  const activeDestIdx = anyTagged
+    ? stops.findIndex((d) => Array.isArray(d.days) && d.days.includes(activeDay))
+    : Math.round(((activeDay - 1) / Math.max(total - 1, 1)) * Math.max(stops.length - 1, 0));
 
   useEffect(() => {
     const gold = goldRef.current;
@@ -73,13 +76,37 @@ function SriLankaMap({
       return best;
     };
 
-    // Head length per day — the stop assigned to that day (carry forward for gaps)
-    const dayLen: number[] = [];
-    let last = 0;
-    for (let day = 1; day <= total; day++) {
-      const stop = stops.find((s) => s.days.includes(day));
-      if (stop) last = lenAtPoint(stop.x, stop.y);
-      dayLen.push(last);
+    // Path length of every stop, in travel order
+    const stopLens = stops.map((s) => lenAtPoint(s.x, s.y));
+    const anyTagged = stops.some((s) => Array.isArray(s.days) && s.days.length > 0);
+
+    // Head length per day. If stops are tagged with day numbers, follow those
+    // (carry forward across untagged days). Otherwise sweep the head evenly
+    // through the marked stops as the visitor scrolls — so it always moves.
+    const evenSweep = () => {
+      const out: number[] = [];
+      const n = Math.max(total, 1);
+      for (let day = 1; day <= n; day++) {
+        const t = n > 1 ? (day - 1) / (n - 1) : 1;
+        const si = Math.round(t * Math.max(stopLens.length - 1, 0));
+        out.push(stopLens[si] ?? 0);
+      }
+      return out;
+    };
+
+    let dayLen: number[];
+    if (anyTagged) {
+      dayLen = [];
+      let last = stopLens[0] ?? 0;
+      for (let day = 1; day <= total; day++) {
+        const idx = stops.findIndex((s) => Array.isArray(s.days) && s.days.includes(day));
+        if (idx >= 0) last = stopLens[idx];
+        dayLen.push(last);
+      }
+      // Degenerate tags (all the same length) → fall back to an even sweep so the head still moves.
+      if (new Set(dayLen).size <= 1) dayLen = evenSweep();
+    } else {
+      dayLen = evenSweep();
     }
 
     let raf = 0;

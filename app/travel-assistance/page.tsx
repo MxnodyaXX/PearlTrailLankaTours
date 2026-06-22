@@ -3,15 +3,11 @@ import PageHero      from "@/components/PageHero";
 import Footer        from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import Link          from "next/link";
+import { getSettings } from "@/lib/settings-store";
+import { getAllServices } from "@/lib/services-store";
+import { waHref } from "@/lib/site-config";
 
-const services = [
-  { icon:"✈️", title:"Airport Pickup & Drop",     desc:"Reliable 24/7 airport transfer from Bandaranaike International Airport to any destination. We track your flight — we'll be there when you land.", href:"/contact" },
-  { icon:"🏨", title:"Hotel Reservations",          desc:"From budget guesthouses to 5-star resorts and boutique villas — we find and book the right accommodation for your style and budget.", href:"/contact" },
-  { icon:"🛂", title:"Visa Assistance",             desc:"Guidance on Sri Lanka's tourist ETA process, help with document preparation, and support for a smooth entry into the island.", href:"/contact" },
-  { icon:"🗺️", title:"Custom Itinerary Planning",  desc:"Tell us your travel dates, budget, and preferences — we'll design a personalized itinerary covering exactly what you want to experience.", href:"/contact" },
-  { icon:"🚗", title:"Chauffeur Services",           desc:"Professional, English-speaking drivers for business travel, corporate events, VIP transfers, and family tour journeys.", href:"/rent-a-car" },
-  { icon:"🌏", title:"International Tours",          desc:"Selected international packages for customers wishing to travel beyond Sri Lanka — Asia, Middle East, and beyond.", href:"/contact" },
-];
+export const dynamic = "force-dynamic";
 
 const steps = [
   { n:"1", title:"Contact Us",     desc:"Reach out via WhatsApp, email, or our inquiry form with your travel details." },
@@ -20,7 +16,8 @@ const steps = [
   { n:"4", title:"Enjoy Sri Lanka!", desc:"We take care of everything — you just sit back and enjoy the journey.", gold:true },
 ];
 
-export default function TravelAssistancePage() {
+export default async function TravelAssistancePage() {
+  const [settings, services] = await Promise.all([getSettings(), getAllServices()]);
   return (
     <>
       <Navbar />
@@ -42,7 +39,7 @@ export default function TravelAssistancePage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((s) => (
-              <Link key={s.title} href={s.href}
+              <Link key={s.id} href={s.href}
                 data-glow
                 className="group bg-white/[.04] border border-white/[.08] rounded-[24px] p-6 flex flex-col gap-3
                   hover:border-gold/40 hover:bg-white/[.07] transition-all duration-300">
@@ -83,7 +80,7 @@ export default function TravelAssistancePage() {
         <p className="text-white/60 mb-8 max-w-md mx-auto">Get in touch and we'll handle everything — from airport arrival to your final departure.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/contact" className="bg-gold hover:bg-gold-deep text-[#0f172a] font-black px-7 py-3.5 rounded-full text-sm transition-all">Send Inquiry</Link>
-          <a href="https://wa.me/94717179956" target="_blank" rel="noopener noreferrer"
+          <a href={waHref(settings)} target="_blank" rel="noopener noreferrer"
             className="bg-emerald-500 hover:bg-emerald-600 text-white font-black px-7 py-3.5 rounded-full text-sm transition-all">WhatsApp Us</a>
         </div>
       </section>

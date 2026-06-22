@@ -4,12 +4,14 @@ import Footer        from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import Link          from "next/link";
 import { getAllPackages } from "@/lib/packages-store";
+import { getSettings } from "@/lib/settings-store";
+import { waHref } from "@/lib/site-config";
 
 // Always read fresh from the DB so admin edits appear immediately
 export const dynamic = "force-dynamic";
 
 export default async function PackagesPage() {
-  const packages = await getAllPackages();
+  const [packages, settings] = await Promise.all([getAllPackages(), getSettings()]);
   return (
     <>
       <Navbar />
@@ -81,7 +83,7 @@ export default async function PackagesPage() {
                       Inquire Now
                     </Link>
                     <a
-                      href={`https://wa.me/94717179956?text=I'm interested in the ${encodeURIComponent(p.title)}`}
+                      href={waHref(settings, `I'm interested in the ${p.title}`)}
                       target="_blank" rel="noopener noreferrer"
                       className="bg-emerald-500 hover:bg-emerald-600 text-white font-black text-sm px-4 py-2.5 rounded-full transition-all"
                     >

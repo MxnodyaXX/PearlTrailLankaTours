@@ -49,7 +49,17 @@
       "PowerShell(cd \"c:\\\\WebProjects\\\\pearl-trail\"; Copy-Item \"PearlTrailLogo.png\" \"public\\\\logo.png\" -Force; Get-ChildItem public\\\\logo.png | Select-Object Name, @{N='KB';E={[math]::Round\\($_.Length/1KB\\)}} | Format-Table -AutoSize)",
       "Bash(xargs grep -l \"middleware.ts\\\\|middleware.js\")",
       "Bash(xargs grep -l \"^# Middleware\\\\|^## Middleware\\\\|middleware.ts\\\\|middleware.js\")",
-      "Bash(grep -n \"env\" .gitignore)"
+      "Bash(grep -n \"env\" .gitignore)",
+      "Bash(cd \"c:\\\\WebProjects\\\\pearl-trail\" && sed -i 's#href={`https://wa.me/94717179956?text=${waText}`}#href={waLink}#g' \"app/packages/[id]/PackageDetailClient.tsx\" && grep -n \"waLink\\\\|wa.me\" \"app/packages/[id]/PackageDetailClient.tsx\")",
+      "Bash(sed -i '1a __TRACKED_VAR__' components/Hero.tsx)",
+      "Bash(sed -i 's#^export default function Hero\\(\\) {#&\\\\n  const settings = useSettings\\(\\);#' components/Hero.tsx)",
+      "Bash(sed -i 's#href=\"https://wa.me/94717179956\"#href={waHref\\(settings\\)}#g' components/Hero.tsx)",
+      "Bash(sed -i '1a __TRACKED_VAR__' components/CinematicJourney.tsx)",
+      "Bash(sed -i 's#^export default function CinematicJourney\\(\\) {#&\\\\n  const settings = useSettings\\(\\);#' components/CinematicJourney.tsx)",
+      "Bash(awk -F: '$1>150 && $1<425')"
+    ],
+    "additionalDirectories": [
+      "C:\\WebProjects\\pearl-trail\\app\\packages\\[id]"
     ]
   }
 }

@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useSettings } from "@/components/SettingsProvider";
 
 const faqs = [
   { q: "Do you provide airport pickup and drop services?",      a: "Yes — reliable 24/7 airport transfers from Bandaranaike International Airport to any destination in Sri Lanka." },
@@ -7,11 +8,13 @@ const faqs = [
   { q: "Do your vehicles come with drivers?",                   a: "Most vehicles are available with professional, English-speaking drivers who know Sri Lanka's roads and tourist sites." },
   { q: "Can you help with hotel bookings?",                     a: "Yes — from budget guesthouses to 5-star resorts and boutique villas, we find and book the right option for you." },
   { q: "Do you provide visa assistance?",                       a: "Yes — we guide you through Sri Lanka's tourist ETA process and help with travel document preparation." },
-  { q: "How do I make a booking?",                              a: "Contact us via WhatsApp (0717179956), fill in our inquiry form, or email pearltraillankatours@gmail.com. We respond within a few hours." },
+  { q: "How do I make a booking?",                              a: "Contact us via WhatsApp ({phone}), fill in our inquiry form, or email {email}. We respond within a few hours." },
 ];
 
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
+  const s = useSettings();
+  const fill = (a: string) => a.replace("{phone}", s.phone).replace("{email}", s.email);
 
   return (
     <section className="bg-[#020617] py-14 md:py-24 px-4">
@@ -42,7 +45,7 @@ export default function FAQ() {
               <div
                 className={`overflow-hidden transition-all duration-300 ${open === i ? "max-h-64 mt-3" : "max-h-0"}`}
               >
-                <p className="text-[#94a3b8] text-sm leading-relaxed">{f.a}</p>
+                <p className="text-[#94a3b8] text-sm leading-relaxed">{fill(f.a)}</p>
               </div>
             </button>
           ))}

@@ -1,4 +1,7 @@
+"use client";
 import Link from "next/link";
+import { useSettings } from "@/components/SettingsProvider";
+import { waHref, telHref, tgHref, mailHref, socialLinks } from "@/lib/site-config";
 
 const quickLinks = [
   { label: "Home",              href: "/" },
@@ -20,14 +23,10 @@ const tours = [
   { label: "Southern Beach",       href: "/packages#southern" },
 ];
 
-const socials = [
-  { label: "Facebook",  href: "https://facebook.com/pearltraillankatours",  icon: "f" },
-  { label: "Instagram", href: "https://instagram.com/pearltraillankatours", icon: "ig" },
-  { label: "TikTok",    href: "https://tiktok.com/@pearltraillankatours",   icon: "tt" },
-  { label: "YouTube",   href: "https://youtube.com/@pearltraillankatours",  icon: "yt" },
-];
-
 export default function Footer() {
+  const s = useSettings();
+  const socials = socialLinks(s);
+  const tg = tgHref(s);
   return (
     <footer className="bg-[#020617] text-white border-t border-white/[.06] pt-12 md:pt-20 pb-8 px-4 md:px-5">
       <div className="w-[min(1120px,100%)] mx-auto">
@@ -48,7 +47,7 @@ export default function Footer() {
               Request a Quote
             </Link>
             <a
-              href="https://wa.me/94717179956"
+              href={waHref(s)}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-emerald-500 hover:bg-emerald-600 text-white font-black text-sm px-5 py-3 md:px-6 md:py-3.5 rounded-full transition-all"
@@ -68,16 +67,16 @@ export default function Footer() {
               Premium Sri Lanka tours, vehicle rentals, airport transfers, hotel bookings and complete travel assistance from Colombo.
             </p>
             <div className="flex gap-2">
-              {socials.map((s) => (
+              {socials.map((soc) => (
                 <a
-                  key={s.label}
-                  href={s.href}
+                  key={soc.label}
+                  href={soc.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={s.label}
+                  aria-label={soc.label}
                   className="w-10 h-10 bg-white/[.06] hover:bg-gold rounded-full flex items-center justify-center text-[10px] font-black text-white hover:text-[#0f172a] transition-all"
                 >
-                  {s.icon.slice(0,2).toUpperCase()}
+                  {soc.short}
                 </a>
               ))}
             </div>
@@ -112,11 +111,11 @@ export default function Footer() {
           <div>
             <p className="text-[10px] font-black uppercase tracking-[.18em] text-white/30 mb-3 md:mb-4">Contact Us</p>
             <ul className="flex flex-col gap-2.5 text-[13px] text-white/55">
-              <li><a href="tel:+94717179956" className="hover:text-gold transition-colors">+94 71 717 9956</a></li>
-              <li><a href="https://wa.me/94717179956" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">WhatsApp</a></li>
-              <li><a href="https://t.me/+94717179956" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Telegram</a></li>
-              <li><a href="mailto:pearltraillankatours@gmail.com" className="hover:text-gold transition-colors break-all">pearltraillankatours@gmail.com</a></li>
-              <li className="text-white/40">Colombo, Sri Lanka</li>
+              <li><a href={telHref(s)} className="hover:text-gold transition-colors">{s.phone}</a></li>
+              <li><a href={waHref(s)} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">WhatsApp</a></li>
+              {tg && <li><a href={tg} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Telegram</a></li>}
+              <li><a href={mailHref(s)} className="hover:text-gold transition-colors break-all">{s.email}</a></li>
+              <li className="text-white/40">{s.address}</li>
             </ul>
           </div>
         </div>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { createSupabaseServer } from "@/lib/supabase/server";
 import { deletePackage } from "./actions";
 import LogoutButton from "@/components/admin/LogoutButton";
+import AdminTabs from "@/components/admin/AdminTabs";
 
 export const dynamic = "force-dynamic";
 
@@ -21,6 +22,8 @@ export default async function AdminHome() {
   return (
     <main className="min-h-screen px-5 py-8" style={{ background: "#020617" }}>
       <div className="w-[min(1000px,100%)] mx-auto">
+        <AdminTabs active="/admin" />
+
         <div className="flex items-center justify-between mb-7">
           <div>
             <h1 className="text-white font-black text-2xl">Tour Packages</h1>

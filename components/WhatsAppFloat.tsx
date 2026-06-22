@@ -1,8 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useSettings } from "@/components/SettingsProvider";
+import { waHref } from "@/lib/site-config";
 
 export default function WhatsAppFloat() {
   const [show, setShow] = useState(false);
+  const settings = useSettings();
 
   useEffect(() => {
     const fn = () => setShow(window.scrollY > 300);
@@ -24,7 +27,7 @@ export default function WhatsAppFloat() {
 
       {/* WhatsApp */}
       <a
-        href="https://wa.me/94717179956"
+        href={waHref(settings)}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"

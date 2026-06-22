@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import CursorGlow from "@/components/CursorGlow";
 import PageTransition from "@/components/PageTransition";
+import SettingsProvider from "@/components/SettingsProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,9 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} h-full`}>
       <body className="min-h-full">
-        <PageTransition />
-        <CursorGlow />
-        {children}
+        <SettingsProvider>
+          <PageTransition />
+          <CursorGlow />
+          {children}
+        </SettingsProvider>
       </body>
     </html>
   );
