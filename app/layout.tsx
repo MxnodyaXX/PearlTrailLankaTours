@@ -11,11 +11,31 @@ const inter = Inter({
 });
 
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://pearltraillankatour.com";
+const TITLE = "PearlTrailLankaTours — Explore Sri Lanka Beyond the Ordinary";
+const DESCRIPTION =
+  "Premium Sri Lanka tour packages, airport transfers, rent-a-car, hotel bookings and complete travel assistance. Based in Colombo, Sri Lanka.";
+
 export const metadata: Metadata = {
-  title: "PearlTrailLankaTours — Explore Sri Lanka Beyond the Ordinary",
-  description:
-    "Premium Sri Lanka tour packages, airport transfers, rent-a-car, hotel bookings and complete travel assistance. Based in Colombo, Sri Lanka.",
+  // Required so the generated icon/OG image URLs are absolute.
+  metadataBase: new URL(SITE_URL),
+  title: TITLE,
+  description: DESCRIPTION,
   keywords: "Sri Lanka tours, tour packages, rent a car Sri Lanka, airport transfer, Colombo, PearlTrailLankaTours",
+  // og:image / twitter:image come from app/opengraph-image.png + app/twitter-image.png
+  openGraph: {
+    type: "website",
+    siteName: "PearlTrail Lanka Tours",
+    title: TITLE,
+    description: DESCRIPTION,
+    url: SITE_URL,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
 };
 
 export default function RootLayout({
