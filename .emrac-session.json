@@ -1,11 +1,11 @@
 {
-  "lastUpdated": 1782114528395,
+  "lastUpdated": 1784888247144,
   "current": {
-    "ts": 1782114528395,
-    "startTime": 1781839535364,
-    "endTime": 1782114528395,
-    "layer": "api",
-    "activeFile": "supabase\\schema.sql",
+    "ts": 1784888247144,
+    "startTime": 1784886591992,
+    "endTime": 1784888247144,
+    "layer": "unknown",
+    "activeFile": null,
     "openTabs": [
       "supabase\\schema.sql",
       ".env.local",
@@ -14,74 +14,194 @@
     ],
     "editedFiles": [
       {
-        "file": ".env.local",
-        "editCount": 13,
-        "firstEdit": 1781843299569,
-        "lastEdit": 1781843398434
-      },
-      {
-        "file": "app\\contact\\page.tsx",
+        "file": "app\\layout.tsx",
         "editCount": 0,
-        "firstEdit": 1781840157995,
-        "lastEdit": 1782109749019
-      },
-      {
-        "file": "components\\Footer.tsx",
-        "editCount": 0,
-        "firstEdit": 1781840176929,
-        "lastEdit": 1782109324274
-      },
-      {
-        "file": "app\\packages\\page.tsx",
-        "editCount": 0,
-        "firstEdit": 1781841558199,
-        "lastEdit": 1782109767867
-      },
-      {
-        "file": "app\\packages\\[id]\\page.tsx",
-        "editCount": 0,
-        "firstEdit": 1781841569843,
-        "lastEdit": 1781841832093
-      },
-      {
-        "file": ".gitignore",
-        "editCount": 0,
-        "firstEdit": 1781841765950,
-        "lastEdit": 1781841765950
-      },
-      {
-        "file": ".env.local.example",
-        "editCount": 0,
-        "firstEdit": 1781843128758,
-        "lastEdit": 1781843128758
-      },
-      {
-        "file": "supabase\\schema.sql",
-        "editCount": 0,
-        "firstEdit": 1781845069329,
-        "lastEdit": 1782112500759
-      },
-      {
-        "file": "lib\\supabase\\browser.ts",
-        "editCount": 0,
-        "firstEdit": 1781845082872,
-        "lastEdit": 1781845082872
-      },
-      {
-        "file": "lib\\packages-store.ts",
-        "editCount": 0,
-        "firstEdit": 1781845103481,
-        "lastEdit": 1781859080277
+        "firstEdit": 1784887965133,
+        "lastEdit": 1784887965133
       }
     ],
-    "saveCount": 13,
-    "topFile": ".env.local"
+    "saveCount": 0,
+    "topFile": "app\\layout.tsx"
   },
   "history": [
     {
-      "ts": 1782114528395,
+      "ts": 1784888247144,
+      "startTime": 1784886591992,
+      "endTime": 1784888247144,
+      "layer": "unknown",
+      "activeFile": null,
+      "openTabs": [
+        "supabase\\schema.sql",
+        ".env.local",
+        "components\\RouteMapSection.tsx",
+        "components\\Testimonials.tsx"
+      ],
+      "editedFiles": [
+        {
+          "file": "app\\layout.tsx",
+          "editCount": 0,
+          "firstEdit": 1784887965133,
+          "lastEdit": 1784887965133
+        }
+      ],
+      "saveCount": 0,
+      "topFile": "app\\layout.tsx"
+    },
+    {
+      "ts": 1784888092048,
+      "startTime": 1784886591992,
+      "endTime": 1784888092048,
+      "layer": "unknown",
+      "activeFile": null,
+      "openTabs": [
+        "supabase\\schema.sql",
+        ".env.local",
+        "components\\RouteMapSection.tsx",
+        "components\\Testimonials.tsx"
+      ],
+      "editedFiles": [
+        {
+          "file": "app\\layout.tsx",
+          "editCount": 0,
+          "firstEdit": 1784887965133,
+          "lastEdit": 1784887965133
+        }
+      ],
+      "saveCount": 0,
+      "topFile": "app\\layout.tsx"
+    },
+    {
+      "ts": 1784887631792,
+      "startTime": 1784886591992,
+      "endTime": 1784887631792,
+      "layer": "unknown",
+      "activeFile": null,
+      "openTabs": [
+        "supabase\\schema.sql",
+        ".env.local",
+        "components\\RouteMapSection.tsx",
+        "components\\Testimonials.tsx"
+      ],
+      "editedFiles": [],
+      "saveCount": 0,
+      "topFile": null
+    },
+    {
+      "ts": 1784887551904,
+      "startTime": 1784886591992,
+      "endTime": 1784887551904,
+      "layer": "unknown",
+      "activeFile": null,
+      "openTabs": [
+        "supabase\\schema.sql",
+        ".env.local",
+        "components\\RouteMapSection.tsx",
+        "components\\Testimonials.tsx"
+      ],
+      "editedFiles": [],
+      "saveCount": 0,
+      "topFile": null
+    },
+    {
+      "ts": 1784886946027,
+      "startTime": 1784886591992,
+      "endTime": 1784886946027,
+      "layer": "unknown",
+      "activeFile": null,
+      "openTabs": [
+        "supabase\\schema.sql",
+        ".env.local",
+        "components\\RouteMapSection.tsx",
+        "components\\Testimonials.tsx"
+      ],
+      "editedFiles": [],
+      "saveCount": 0,
+      "topFile": null
+    },
+    {
+      "ts": 1784886889647,
+      "startTime": 1784886591992,
+      "endTime": 1784886889647,
+      "layer": "unknown",
+      "activeFile": null,
+      "openTabs": [
+        "supabase\\schema.sql",
+        ".env.local",
+        "components\\RouteMapSection.tsx",
+        "components\\Testimonials.tsx"
+      ],
+      "editedFiles": [],
+      "saveCount": 0,
+      "topFile": null
+    },
+    {
+      "ts": 1783014833057,
+      "startTime": 1782962877772,
+      "endTime": 1783014833057,
+      "layer": "unknown",
+      "activeFile": null,
+      "openTabs": [
+        "supabase\\schema.sql",
+        ".env.local",
+        "components\\RouteMapSection.tsx",
+        "components\\Testimonials.tsx"
+      ],
+      "editedFiles": [],
+      "saveCount": 0,
+      "topFile": null
+    },
+    {
+      "ts": 1783014833055,
+      "startTime": 1782962877772,
+      "endTime": 1783014833055,
+      "layer": "unknown",
+      "activeFile": null,
+      "openTabs": [
+        "supabase\\schema.sql",
+        ".env.local",
+        "components\\RouteMapSection.tsx",
+        "components\\Testimonials.tsx"
+      ],
+      "editedFiles": [],
+      "saveCount": 0,
+      "topFile": null
+    },
+    {
+      "ts": 1782986651812,
+      "startTime": 1782962877772,
+      "endTime": 1782986651812,
+      "layer": "unknown",
+      "activeFile": null,
+      "openTabs": [
+        "supabase\\schema.sql",
+        ".env.local",
+        "components\\RouteMapSection.tsx",
+        "components\\Testimonials.tsx"
+      ],
+      "editedFiles": [],
+      "saveCount": 0,
+      "topFile": null
+    },
+    {
+      "ts": 1782963279076,
+      "startTime": 1782962877772,
+      "endTime": 1782963279076,
+      "layer": "unknown",
+      "activeFile": null,
+      "openTabs": [
+        "supabase\\schema.sql",
+        ".env.local",
+        "components\\RouteMapSection.tsx",
+        "components\\Testimonials.tsx"
+      ],
+      "editedFiles": [],
+      "saveCount": 0,
+      "topFile": null
+    },
+    {
+      "ts": 1782188780571,
       "startTime": 1781839535364,
-      "endTime": 1782114528395,
+      "endTime": 1782188780571,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -156,9 +276,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1782114426687,
+      "ts": 1782188780568,
       "startTime": 1781839535364,
-      "endTime": 1782114426687,
+      "endTime": 1782188780568,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -233,9 +353,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1782114228392,
+      "ts": 1782188630672,
       "startTime": 1781839535364,
-      "endTime": 1782114228392,
+      "endTime": 1782188630672,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -310,9 +430,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1782113930883,
+      "ts": 1782188330659,
       "startTime": 1781839535364,
-      "endTime": 1782113930883,
+      "endTime": 1782188330659,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -387,9 +507,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1782113928383,
+      "ts": 1782188030654,
       "startTime": 1781839535364,
-      "endTime": 1782113928383,
+      "endTime": 1782188030654,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -464,9 +584,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1782113813597,
+      "ts": 1782187730646,
       "startTime": 1781839535364,
-      "endTime": 1782113813597,
+      "endTime": 1782187730646,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -541,9 +661,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1782113725971,
+      "ts": 1782187430641,
       "startTime": 1781839535364,
-      "endTime": 1782113725971,
+      "endTime": 1782187430641,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -618,9 +738,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1782113628040,
+      "ts": 1782187130625,
       "startTime": 1781839535364,
-      "endTime": 1782113628040,
+      "endTime": 1782187130625,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -695,9 +815,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1782113328029,
+      "ts": 1782186830609,
       "startTime": 1781839535364,
-      "endTime": 1782113328029,
+      "endTime": 1782186830609,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -772,9 +892,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1782113288691,
+      "ts": 1782186530601,
       "startTime": 1781839535364,
-      "endTime": 1782113288691,
+      "endTime": 1782186530601,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -849,9 +969,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1782113219816,
+      "ts": 1782186230589,
       "startTime": 1781839535364,
-      "endTime": 1782113219816,
+      "endTime": 1782186230589,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -926,9 +1046,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1782113079225,
+      "ts": 1782185930572,
       "startTime": 1781839535364,
-      "endTime": 1782113079225,
+      "endTime": 1782185930572,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1003,9 +1123,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1782113042734,
+      "ts": 1782185630564,
       "startTime": 1781839535364,
-      "endTime": 1782113042734,
+      "endTime": 1782185630564,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1080,9 +1200,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1782113041006,
+      "ts": 1782185330562,
       "startTime": 1781839535364,
-      "endTime": 1782113041006,
+      "endTime": 1782185330562,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1157,9 +1277,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1782113039563,
+      "ts": 1782185030547,
       "startTime": 1781839535364,
-      "endTime": 1782113039563,
+      "endTime": 1782185030547,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1234,9 +1354,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1782113028027,
+      "ts": 1782184730537,
       "startTime": 1781839535364,
-      "endTime": 1782113028027,
+      "endTime": 1782184730537,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1311,9 +1431,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1782113008810,
+      "ts": 1782184430522,
       "startTime": 1781839535364,
-      "endTime": 1782113008810,
+      "endTime": 1782184430522,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1388,9 +1508,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1782112728023,
+      "ts": 1782184130508,
       "startTime": 1781839535364,
-      "endTime": 1782112728023,
+      "endTime": 1782184130508,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1465,9 +1585,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1782112582837,
+      "ts": 1782183830504,
       "startTime": 1781839535364,
-      "endTime": 1782112582837,
+      "endTime": 1782183830504,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1542,9 +1662,9 @@
       "topFile": ".env.local"
     },
     {
-      "ts": 1782112428020,
+      "ts": 1782183530496,
       "startTime": 1781839535364,
-      "endTime": 1782112428020,
+      "endTime": 1782183530496,
       "layer": "api",
       "activeFile": "supabase\\schema.sql",
       "openTabs": [
@@ -1600,777 +1720,7 @@
           "file": "supabase\\schema.sql",
           "editCount": 0,
           "firstEdit": 1781845069329,
-          "lastEdit": 1782109228172
-        },
-        {
-          "file": "lib\\supabase\\browser.ts",
-          "editCount": 0,
-          "firstEdit": 1781845082872,
-          "lastEdit": 1781845082872
-        },
-        {
-          "file": "lib\\packages-store.ts",
-          "editCount": 0,
-          "firstEdit": 1781845103481,
-          "lastEdit": 1781859080277
-        }
-      ],
-      "saveCount": 13,
-      "topFile": ".env.local"
-    },
-    {
-      "ts": 1782112128005,
-      "startTime": 1781839535364,
-      "endTime": 1782112128005,
-      "layer": "api",
-      "activeFile": "supabase\\schema.sql",
-      "openTabs": [
-        "supabase\\schema.sql",
-        ".env.local",
-        "components\\RouteMapSection.tsx",
-        "components\\Testimonials.tsx"
-      ],
-      "editedFiles": [
-        {
-          "file": ".env.local",
-          "editCount": 13,
-          "firstEdit": 1781843299569,
-          "lastEdit": 1781843398434
-        },
-        {
-          "file": "app\\contact\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781840157995,
-          "lastEdit": 1782109749019
-        },
-        {
-          "file": "components\\Footer.tsx",
-          "editCount": 0,
-          "firstEdit": 1781840176929,
-          "lastEdit": 1782109324274
-        },
-        {
-          "file": "app\\packages\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781841558199,
-          "lastEdit": 1782109767867
-        },
-        {
-          "file": "app\\packages\\[id]\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781841569843,
-          "lastEdit": 1781841832093
-        },
-        {
-          "file": ".gitignore",
-          "editCount": 0,
-          "firstEdit": 1781841765950,
-          "lastEdit": 1781841765950
-        },
-        {
-          "file": ".env.local.example",
-          "editCount": 0,
-          "firstEdit": 1781843128758,
-          "lastEdit": 1781843128758
-        },
-        {
-          "file": "supabase\\schema.sql",
-          "editCount": 0,
-          "firstEdit": 1781845069329,
-          "lastEdit": 1782109228172
-        },
-        {
-          "file": "lib\\supabase\\browser.ts",
-          "editCount": 0,
-          "firstEdit": 1781845082872,
-          "lastEdit": 1781845082872
-        },
-        {
-          "file": "lib\\packages-store.ts",
-          "editCount": 0,
-          "firstEdit": 1781845103481,
-          "lastEdit": 1781859080277
-        }
-      ],
-      "saveCount": 13,
-      "topFile": ".env.local"
-    },
-    {
-      "ts": 1782111828000,
-      "startTime": 1781839535364,
-      "endTime": 1782111828000,
-      "layer": "api",
-      "activeFile": "supabase\\schema.sql",
-      "openTabs": [
-        "supabase\\schema.sql",
-        ".env.local",
-        "components\\RouteMapSection.tsx",
-        "components\\Testimonials.tsx"
-      ],
-      "editedFiles": [
-        {
-          "file": ".env.local",
-          "editCount": 13,
-          "firstEdit": 1781843299569,
-          "lastEdit": 1781843398434
-        },
-        {
-          "file": "app\\contact\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781840157995,
-          "lastEdit": 1782109749019
-        },
-        {
-          "file": "components\\Footer.tsx",
-          "editCount": 0,
-          "firstEdit": 1781840176929,
-          "lastEdit": 1782109324274
-        },
-        {
-          "file": "app\\packages\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781841558199,
-          "lastEdit": 1782109767867
-        },
-        {
-          "file": "app\\packages\\[id]\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781841569843,
-          "lastEdit": 1781841832093
-        },
-        {
-          "file": ".gitignore",
-          "editCount": 0,
-          "firstEdit": 1781841765950,
-          "lastEdit": 1781841765950
-        },
-        {
-          "file": ".env.local.example",
-          "editCount": 0,
-          "firstEdit": 1781843128758,
-          "lastEdit": 1781843128758
-        },
-        {
-          "file": "supabase\\schema.sql",
-          "editCount": 0,
-          "firstEdit": 1781845069329,
-          "lastEdit": 1782109228172
-        },
-        {
-          "file": "lib\\supabase\\browser.ts",
-          "editCount": 0,
-          "firstEdit": 1781845082872,
-          "lastEdit": 1781845082872
-        },
-        {
-          "file": "lib\\packages-store.ts",
-          "editCount": 0,
-          "firstEdit": 1781845103481,
-          "lastEdit": 1781859080277
-        }
-      ],
-      "saveCount": 13,
-      "topFile": ".env.local"
-    },
-    {
-      "ts": 1782111595656,
-      "startTime": 1781839535364,
-      "endTime": 1782111595656,
-      "layer": "api",
-      "activeFile": "supabase\\schema.sql",
-      "openTabs": [
-        "supabase\\schema.sql",
-        ".env.local",
-        "components\\RouteMapSection.tsx",
-        "components\\Testimonials.tsx"
-      ],
-      "editedFiles": [
-        {
-          "file": ".env.local",
-          "editCount": 13,
-          "firstEdit": 1781843299569,
-          "lastEdit": 1781843398434
-        },
-        {
-          "file": "app\\contact\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781840157995,
-          "lastEdit": 1782109749019
-        },
-        {
-          "file": "components\\Footer.tsx",
-          "editCount": 0,
-          "firstEdit": 1781840176929,
-          "lastEdit": 1782109324274
-        },
-        {
-          "file": "app\\packages\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781841558199,
-          "lastEdit": 1782109767867
-        },
-        {
-          "file": "app\\packages\\[id]\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781841569843,
-          "lastEdit": 1781841832093
-        },
-        {
-          "file": ".gitignore",
-          "editCount": 0,
-          "firstEdit": 1781841765950,
-          "lastEdit": 1781841765950
-        },
-        {
-          "file": ".env.local.example",
-          "editCount": 0,
-          "firstEdit": 1781843128758,
-          "lastEdit": 1781843128758
-        },
-        {
-          "file": "supabase\\schema.sql",
-          "editCount": 0,
-          "firstEdit": 1781845069329,
-          "lastEdit": 1782109228172
-        },
-        {
-          "file": "lib\\supabase\\browser.ts",
-          "editCount": 0,
-          "firstEdit": 1781845082872,
-          "lastEdit": 1781845082872
-        },
-        {
-          "file": "lib\\packages-store.ts",
-          "editCount": 0,
-          "firstEdit": 1781845103481,
-          "lastEdit": 1781859080277
-        }
-      ],
-      "saveCount": 13,
-      "topFile": ".env.local"
-    },
-    {
-      "ts": 1782111584718,
-      "startTime": 1781839535364,
-      "endTime": 1782111584718,
-      "layer": "api",
-      "activeFile": "supabase\\schema.sql",
-      "openTabs": [
-        "supabase\\schema.sql",
-        ".env.local",
-        "components\\RouteMapSection.tsx",
-        "components\\Testimonials.tsx"
-      ],
-      "editedFiles": [
-        {
-          "file": ".env.local",
-          "editCount": 13,
-          "firstEdit": 1781843299569,
-          "lastEdit": 1781843398434
-        },
-        {
-          "file": "app\\contact\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781840157995,
-          "lastEdit": 1782109749019
-        },
-        {
-          "file": "components\\Footer.tsx",
-          "editCount": 0,
-          "firstEdit": 1781840176929,
-          "lastEdit": 1782109324274
-        },
-        {
-          "file": "app\\packages\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781841558199,
-          "lastEdit": 1782109767867
-        },
-        {
-          "file": "app\\packages\\[id]\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781841569843,
-          "lastEdit": 1781841832093
-        },
-        {
-          "file": ".gitignore",
-          "editCount": 0,
-          "firstEdit": 1781841765950,
-          "lastEdit": 1781841765950
-        },
-        {
-          "file": ".env.local.example",
-          "editCount": 0,
-          "firstEdit": 1781843128758,
-          "lastEdit": 1781843128758
-        },
-        {
-          "file": "supabase\\schema.sql",
-          "editCount": 0,
-          "firstEdit": 1781845069329,
-          "lastEdit": 1782109228172
-        },
-        {
-          "file": "lib\\supabase\\browser.ts",
-          "editCount": 0,
-          "firstEdit": 1781845082872,
-          "lastEdit": 1781845082872
-        },
-        {
-          "file": "lib\\packages-store.ts",
-          "editCount": 0,
-          "firstEdit": 1781845103481,
-          "lastEdit": 1781859080277
-        }
-      ],
-      "saveCount": 13,
-      "topFile": ".env.local"
-    },
-    {
-      "ts": 1782111527983,
-      "startTime": 1781839535364,
-      "endTime": 1782111527983,
-      "layer": "api",
-      "activeFile": "supabase\\schema.sql",
-      "openTabs": [
-        "supabase\\schema.sql",
-        ".env.local",
-        "components\\RouteMapSection.tsx",
-        "components\\Testimonials.tsx"
-      ],
-      "editedFiles": [
-        {
-          "file": ".env.local",
-          "editCount": 13,
-          "firstEdit": 1781843299569,
-          "lastEdit": 1781843398434
-        },
-        {
-          "file": "app\\contact\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781840157995,
-          "lastEdit": 1782109749019
-        },
-        {
-          "file": "components\\Footer.tsx",
-          "editCount": 0,
-          "firstEdit": 1781840176929,
-          "lastEdit": 1782109324274
-        },
-        {
-          "file": "app\\packages\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781841558199,
-          "lastEdit": 1782109767867
-        },
-        {
-          "file": "app\\packages\\[id]\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781841569843,
-          "lastEdit": 1781841832093
-        },
-        {
-          "file": ".gitignore",
-          "editCount": 0,
-          "firstEdit": 1781841765950,
-          "lastEdit": 1781841765950
-        },
-        {
-          "file": ".env.local.example",
-          "editCount": 0,
-          "firstEdit": 1781843128758,
-          "lastEdit": 1781843128758
-        },
-        {
-          "file": "supabase\\schema.sql",
-          "editCount": 0,
-          "firstEdit": 1781845069329,
-          "lastEdit": 1782109228172
-        },
-        {
-          "file": "lib\\supabase\\browser.ts",
-          "editCount": 0,
-          "firstEdit": 1781845082872,
-          "lastEdit": 1781845082872
-        },
-        {
-          "file": "lib\\packages-store.ts",
-          "editCount": 0,
-          "firstEdit": 1781845103481,
-          "lastEdit": 1781859080277
-        }
-      ],
-      "saveCount": 13,
-      "topFile": ".env.local"
-    },
-    {
-      "ts": 1782111227983,
-      "startTime": 1781839535364,
-      "endTime": 1782111227983,
-      "layer": "api",
-      "activeFile": "supabase\\schema.sql",
-      "openTabs": [
-        "supabase\\schema.sql",
-        ".env.local",
-        "components\\RouteMapSection.tsx",
-        "components\\Testimonials.tsx"
-      ],
-      "editedFiles": [
-        {
-          "file": ".env.local",
-          "editCount": 13,
-          "firstEdit": 1781843299569,
-          "lastEdit": 1781843398434
-        },
-        {
-          "file": "app\\contact\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781840157995,
-          "lastEdit": 1782109749019
-        },
-        {
-          "file": "components\\Footer.tsx",
-          "editCount": 0,
-          "firstEdit": 1781840176929,
-          "lastEdit": 1782109324274
-        },
-        {
-          "file": "app\\packages\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781841558199,
-          "lastEdit": 1782109767867
-        },
-        {
-          "file": "app\\packages\\[id]\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781841569843,
-          "lastEdit": 1781841832093
-        },
-        {
-          "file": ".gitignore",
-          "editCount": 0,
-          "firstEdit": 1781841765950,
-          "lastEdit": 1781841765950
-        },
-        {
-          "file": ".env.local.example",
-          "editCount": 0,
-          "firstEdit": 1781843128758,
-          "lastEdit": 1781843128758
-        },
-        {
-          "file": "supabase\\schema.sql",
-          "editCount": 0,
-          "firstEdit": 1781845069329,
-          "lastEdit": 1782109228172
-        },
-        {
-          "file": "lib\\supabase\\browser.ts",
-          "editCount": 0,
-          "firstEdit": 1781845082872,
-          "lastEdit": 1781845082872
-        },
-        {
-          "file": "lib\\packages-store.ts",
-          "editCount": 0,
-          "firstEdit": 1781845103481,
-          "lastEdit": 1781859080277
-        }
-      ],
-      "saveCount": 13,
-      "topFile": ".env.local"
-    },
-    {
-      "ts": 1782110927976,
-      "startTime": 1781839535364,
-      "endTime": 1782110927976,
-      "layer": "api",
-      "activeFile": "supabase\\schema.sql",
-      "openTabs": [
-        "supabase\\schema.sql",
-        ".env.local",
-        "components\\RouteMapSection.tsx",
-        "components\\Testimonials.tsx"
-      ],
-      "editedFiles": [
-        {
-          "file": ".env.local",
-          "editCount": 13,
-          "firstEdit": 1781843299569,
-          "lastEdit": 1781843398434
-        },
-        {
-          "file": "app\\contact\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781840157995,
-          "lastEdit": 1782109749019
-        },
-        {
-          "file": "components\\Footer.tsx",
-          "editCount": 0,
-          "firstEdit": 1781840176929,
-          "lastEdit": 1782109324274
-        },
-        {
-          "file": "app\\packages\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781841558199,
-          "lastEdit": 1782109767867
-        },
-        {
-          "file": "app\\packages\\[id]\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781841569843,
-          "lastEdit": 1781841832093
-        },
-        {
-          "file": ".gitignore",
-          "editCount": 0,
-          "firstEdit": 1781841765950,
-          "lastEdit": 1781841765950
-        },
-        {
-          "file": ".env.local.example",
-          "editCount": 0,
-          "firstEdit": 1781843128758,
-          "lastEdit": 1781843128758
-        },
-        {
-          "file": "supabase\\schema.sql",
-          "editCount": 0,
-          "firstEdit": 1781845069329,
-          "lastEdit": 1782109228172
-        },
-        {
-          "file": "lib\\supabase\\browser.ts",
-          "editCount": 0,
-          "firstEdit": 1781845082872,
-          "lastEdit": 1781845082872
-        },
-        {
-          "file": "lib\\packages-store.ts",
-          "editCount": 0,
-          "firstEdit": 1781845103481,
-          "lastEdit": 1781859080277
-        }
-      ],
-      "saveCount": 13,
-      "topFile": ".env.local"
-    },
-    {
-      "ts": 1782110848750,
-      "startTime": 1781839535364,
-      "endTime": 1782110848750,
-      "layer": "api",
-      "activeFile": "supabase\\schema.sql",
-      "openTabs": [
-        "supabase\\schema.sql",
-        ".env.local",
-        "components\\RouteMapSection.tsx",
-        "components\\Testimonials.tsx"
-      ],
-      "editedFiles": [
-        {
-          "file": ".env.local",
-          "editCount": 13,
-          "firstEdit": 1781843299569,
-          "lastEdit": 1781843398434
-        },
-        {
-          "file": "app\\contact\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781840157995,
-          "lastEdit": 1782109749019
-        },
-        {
-          "file": "components\\Footer.tsx",
-          "editCount": 0,
-          "firstEdit": 1781840176929,
-          "lastEdit": 1782109324274
-        },
-        {
-          "file": "app\\packages\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781841558199,
-          "lastEdit": 1782109767867
-        },
-        {
-          "file": "app\\packages\\[id]\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781841569843,
-          "lastEdit": 1781841832093
-        },
-        {
-          "file": ".gitignore",
-          "editCount": 0,
-          "firstEdit": 1781841765950,
-          "lastEdit": 1781841765950
-        },
-        {
-          "file": ".env.local.example",
-          "editCount": 0,
-          "firstEdit": 1781843128758,
-          "lastEdit": 1781843128758
-        },
-        {
-          "file": "supabase\\schema.sql",
-          "editCount": 0,
-          "firstEdit": 1781845069329,
-          "lastEdit": 1782109228172
-        },
-        {
-          "file": "lib\\supabase\\browser.ts",
-          "editCount": 0,
-          "firstEdit": 1781845082872,
-          "lastEdit": 1781845082872
-        },
-        {
-          "file": "lib\\packages-store.ts",
-          "editCount": 0,
-          "firstEdit": 1781845103481,
-          "lastEdit": 1781859080277
-        }
-      ],
-      "saveCount": 13,
-      "topFile": ".env.local"
-    },
-    {
-      "ts": 1782110627975,
-      "startTime": 1781839535364,
-      "endTime": 1782110627975,
-      "layer": "api",
-      "activeFile": "supabase\\schema.sql",
-      "openTabs": [
-        "supabase\\schema.sql",
-        ".env.local",
-        "components\\RouteMapSection.tsx",
-        "components\\Testimonials.tsx"
-      ],
-      "editedFiles": [
-        {
-          "file": ".env.local",
-          "editCount": 13,
-          "firstEdit": 1781843299569,
-          "lastEdit": 1781843398434
-        },
-        {
-          "file": "app\\contact\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781840157995,
-          "lastEdit": 1782109749019
-        },
-        {
-          "file": "components\\Footer.tsx",
-          "editCount": 0,
-          "firstEdit": 1781840176929,
-          "lastEdit": 1782109324274
-        },
-        {
-          "file": "app\\packages\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781841558199,
-          "lastEdit": 1782109767867
-        },
-        {
-          "file": "app\\packages\\[id]\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781841569843,
-          "lastEdit": 1781841832093
-        },
-        {
-          "file": ".gitignore",
-          "editCount": 0,
-          "firstEdit": 1781841765950,
-          "lastEdit": 1781841765950
-        },
-        {
-          "file": ".env.local.example",
-          "editCount": 0,
-          "firstEdit": 1781843128758,
-          "lastEdit": 1781843128758
-        },
-        {
-          "file": "supabase\\schema.sql",
-          "editCount": 0,
-          "firstEdit": 1781845069329,
-          "lastEdit": 1782109228172
-        },
-        {
-          "file": "lib\\supabase\\browser.ts",
-          "editCount": 0,
-          "firstEdit": 1781845082872,
-          "lastEdit": 1781845082872
-        },
-        {
-          "file": "lib\\packages-store.ts",
-          "editCount": 0,
-          "firstEdit": 1781845103481,
-          "lastEdit": 1781859080277
-        }
-      ],
-      "saveCount": 13,
-      "topFile": ".env.local"
-    },
-    {
-      "ts": 1782110327958,
-      "startTime": 1781839535364,
-      "endTime": 1782110327958,
-      "layer": "api",
-      "activeFile": "supabase\\schema.sql",
-      "openTabs": [
-        "supabase\\schema.sql",
-        ".env.local",
-        "components\\RouteMapSection.tsx",
-        "components\\Testimonials.tsx"
-      ],
-      "editedFiles": [
-        {
-          "file": ".env.local",
-          "editCount": 13,
-          "firstEdit": 1781843299569,
-          "lastEdit": 1781843398434
-        },
-        {
-          "file": "app\\contact\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781840157995,
-          "lastEdit": 1782109749019
-        },
-        {
-          "file": "components\\Footer.tsx",
-          "editCount": 0,
-          "firstEdit": 1781840176929,
-          "lastEdit": 1782109324274
-        },
-        {
-          "file": "app\\packages\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781841558199,
-          "lastEdit": 1782109767867
-        },
-        {
-          "file": "app\\packages\\[id]\\page.tsx",
-          "editCount": 0,
-          "firstEdit": 1781841569843,
-          "lastEdit": 1781841832093
-        },
-        {
-          "file": ".gitignore",
-          "editCount": 0,
-          "firstEdit": 1781841765950,
-          "lastEdit": 1781841765950
-        },
-        {
-          "file": ".env.local.example",
-          "editCount": 0,
-          "firstEdit": 1781843128758,
-          "lastEdit": 1781843128758
-        },
-        {
-          "file": "supabase\\schema.sql",
-          "editCount": 0,
-          "firstEdit": 1781845069329,
-          "lastEdit": 1782109228172
+          "lastEdit": 1782112500759
         },
         {
           "file": "lib\\supabase\\browser.ts",
