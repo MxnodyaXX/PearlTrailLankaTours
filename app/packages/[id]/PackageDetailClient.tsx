@@ -20,10 +20,9 @@ export default function PackageDetailClient({ pkg }: { pkg: TourPackage }) {
   const settings = useSettings();
 
   const hasItinerary = pkg.itinerary.length > 0;
-  // Show the animated map for the code-managed Sacred Circuit, OR any package
-  // that has a saved map (route + at least one stop) from the admin editor.
+  // Show the animated map for any package with a saved map (route + at least
+  // one stop) from the admin map editor.
   const savedMap = pkg.map && pkg.map.route.length > 1 && pkg.map.stops.length > 0 ? pkg.map : null;
-  const hasMap = pkg.id === "sacred-circuit" || !!savedMap;
   const waLink = waHref(settings, `I'm interested in the ${pkg.title}`);
   const stops = hasItinerary ? pkg.itinerary.length : pkg.desc.split(" · ").length;
 
@@ -133,7 +132,7 @@ export default function PackageDetailClient({ pkg }: { pkg: TourPackage }) {
       </section>
 
       {/* ── DAY-BY-DAY GUIDE (map-synced) ──────────────────────── */}
-      {hasMap && <RouteMapSection days={pkg.itinerary} route={savedMap?.route} stops={savedMap?.stops} />}
+      {savedMap && <RouteMapSection days={pkg.itinerary} route={savedMap.route} stops={savedMap.stops} />}
 
       {/* ── BOOK CTA ───────────────────────────────────────────── */}
       <section className="bg-[#020617] py-24 md:py-28 px-6 md:px-16 text-center border-t border-white/[.06]">

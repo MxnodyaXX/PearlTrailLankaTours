@@ -71,7 +71,7 @@ export default async function AdminHome() {
 
         <p className="text-white/25 text-xs mt-8">
           You can create both simple and multi-day packages here (add days, each with up to 3 photos + a thumbnail).
-          The flagship “Sacred Circuit” keeps its hand-built animated route map in code, so it isn’t listed here.
+          Add a route map to a multi-day package to show the scroll-synced journey map on its page.
         </p>
       </div>
     </main>

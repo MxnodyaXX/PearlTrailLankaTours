@@ -1,12 +1,8 @@
 import { packages as codePackages, type TourPackage, type DayPlan, type PackageMap } from "./packages-data";
 import { supabase, supabaseConfigured } from "./supabase";
 
-/* The flagship "Sacred Circuit" has a hand-tuned animated route map keyed to
-   its coordinates, so it stays CODE-MANAGED. Everything else — simple AND
-   multi-day packages — is editable from the DB (the multi-day ones store their
-   itinerary as JSON; admin packages just don't get the animated map). */
-const CODE_MANAGED_IDS = new Set(["sacred-circuit"]);
-const codeManaged = codePackages.filter((p) => CODE_MANAGED_IDS.has(p.id));
+/* Every package — simple and multi-day — is managed from the DB. The list in
+   packages-data.ts is only the fallback used before the table is seeded. */
 
 type Row = {
   id: string; title: string; tagline: string | null; days: string | null;
@@ -33,8 +29,7 @@ function rowToPackage(r: Row): TourPackage {
   };
 }
 
-/** All packages for the listing page — simple ones from the DB (or code as a
- *  fallback) plus the code-managed complex ones appended. */
+/** All packages for the listing page, from the DB (code list as a fallback). */
 export async function getAllPackages(): Promise<TourPackage[]> {
   if (!supabaseConfigured || !supabase) return codePackages;
 
@@ -44,15 +39,11 @@ export async function getAllPackages(): Promise<TourPackage[]> {
     .order("sort", { ascending: true });
 
   if (error || !data || data.length === 0) return codePackages; // graceful fallback
-  const dbPackages = data.map(rowToPackage).filter((p) => !CODE_MANAGED_IDS.has(p.id));
-  return [...dbPackages, ...codeManaged];
+  return data.map(rowToPackage);
 }
 
-/** A single package by id (code-managed flagship, else from the DB). */
+/** A single package by id, from the DB (code list as a fallback). */
 export async function getPackageById(id: string): Promise<TourPackage | null> {
-  const coded = codeManaged.find((p) => p.id === id);
-  if (coded) return coded;
-
   if (!supabaseConfigured || !supabase) {
     return codePackages.find((p) => p.id === id) ?? null;
   }

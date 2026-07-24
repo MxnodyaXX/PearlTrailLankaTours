@@ -1,7 +1,7 @@
 # Backend setup — Supabase (free cloud database)
 
-This lets your client edit the **simple tour packages** without touching code.
-The complex *Sacred Circuit* (route map + 10-day itinerary) stays code-managed.
+This lets your client edit **all tour packages** without touching code — simple
+and multi-day ones, including their day-by-day photos and route map.
 
 > While Supabase isn't configured yet, the site keeps working — it falls back to
 > the packages in `lib/packages-data.ts`. Nothing breaks during setup.

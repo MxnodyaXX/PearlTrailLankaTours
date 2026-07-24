@@ -7,33 +7,6 @@ import { smoothPath } from "@/lib/route-path";
 const clamp = (v: number, a: number, b: number) => Math.max(a, Math.min(b, v));
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
 
-// ── Defaults — the flagship Sacred Circuit (used when a package has no saved map)
-const DEFAULT_STOPS: MapStop[] = [
-  { x: 125, y: 611, label: "Negombo",      anchor: "end",   days: [1] },
-  { x: 247, y: 362, label: "Anuradhapura", anchor: "end",   days: [2, 3] },
-  { x: 430, y: 311, label: "Trincomalee",  anchor: "start", days: [4] },
-  { x: 330, y: 576, label: "Kandy",        anchor: "start", days: [5, 6] },
-  { x: 358, y: 704, label: "Nuwara Eliya", anchor: "start", days: [7] },
-  { x: 521, y: 810, label: "Kataragama",   anchor: "end",   days: [8] },
-  { x: 214, y: 907, label: "Galle",        anchor: "end",   days: [9] },
-  { x: 125, y: 696, label: "Colombo",      anchor: "end",   days: [10] },
-];
-
-const DEFAULT_ROUTE: MapPoint[] = [
-  { x: 125, y: 611 }, { x: 141, y: 554 }, { x: 152, y: 507 }, { x: 173, y: 465 }, { x: 199, y: 438 }, { x: 228, y: 391 },
-  { x: 247, y: 362 }, { x: 274, y: 343 }, { x: 302, y: 330 }, { x: 333, y: 317 }, { x: 357, y: 315 }, { x: 401, y: 312 }, { x: 425, y: 300 },
-  { x: 430, y: 311 }, { x: 416, y: 313 }, { x: 416, y: 325 }, { x: 417, y: 339 }, { x: 415, y: 357 }, { x: 417, y: 378 }, { x: 416, y: 410 },
-  { x: 401, y: 444 }, { x: 379, y: 467 }, { x: 365, y: 470 }, { x: 363, y: 495 }, { x: 360, y: 526 }, { x: 346, y: 548 }, { x: 349, y: 564 },
-  { x: 330, y: 576 }, { x: 337, y: 631 }, { x: 342, y: 643 }, { x: 373, y: 674 },
-  { x: 358, y: 704 }, { x: 369, y: 727 }, { x: 407, y: 732 }, { x: 465, y: 749 }, { x: 483, y: 765 }, { x: 496, y: 786 }, { x: 521, y: 805 },
-  { x: 521, y: 810 }, { x: 496, y: 823 }, { x: 476, y: 839 }, { x: 467, y: 854 }, { x: 458, y: 857 }, { x: 443, y: 863 }, { x: 431, y: 863 },
-  { x: 427, y: 873 }, { x: 413, y: 873 }, { x: 395, y: 881 }, { x: 381, y: 881 }, { x: 370, y: 878 }, { x: 362, y: 887 }, { x: 348, y: 895 },
-  { x: 326, y: 907 }, { x: 307, y: 913 }, { x: 300, y: 921 }, { x: 294, y: 927 }, { x: 281, y: 919 }, { x: 269, y: 919 }, { x: 253, y: 918 }, { x: 241, y: 921 }, { x: 225, y: 913 },
-  { x: 214, y: 907 }, { x: 197, y: 902 }, { x: 196, y: 891 }, { x: 183, y: 879 }, { x: 178, y: 861 }, { x: 173, y: 848 }, { x: 163, y: 836 }, { x: 165, y: 822 }, { x: 165, y: 810 },
-  { x: 158, y: 807 }, { x: 152, y: 787 }, { x: 148, y: 773 }, { x: 139, y: 759 }, { x: 139, y: 747 }, { x: 157, y: 738 }, { x: 142, y: 729 }, { x: 131, y: 727 }, { x: 130, y: 717 },
-  { x: 125, y: 696 },
-];
-
 // ── Map ───────────────────────────────────────────────────────────────────────
 function SriLankaMap({
   activeDay, panelRefs, total, route, stops,
@@ -189,10 +162,7 @@ function SriLankaMap({
 }
 
 // ── Section ───────────────────────────────────────────────────────────────────
-export default function RouteMapSection({ days, route, stops }: { days: DayPlan[]; route?: MapPoint[]; stops?: MapStop[] }) {
-  const resolvedRoute = route && route.length > 1 ? route : DEFAULT_ROUTE;
-  const resolvedStops = stops && stops.length > 0 ? stops : DEFAULT_STOPS;
-
+export default function RouteMapSection({ days, route, stops }: { days: DayPlan[]; route: MapPoint[]; stops: MapStop[] }) {
   const [activeDay, setActiveDay] = useState(1);
   const panelRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -235,17 +205,17 @@ export default function RouteMapSection({ days, route, stops }: { days: DayPlan[
       <div className="md:grid md:grid-cols-[1fr_1.3fr] md:items-start">
         <div className="hidden md:flex md:sticky md:top-0 md:h-screen p-6 lg:p-26 items-center"
           style={{ background: "radial-gradient(ellipse 72% 58% at 50% 46%, rgba(34,64,104,0.28) 0%, transparent 70%)" }}>
-          <SriLankaMap activeDay={activeDay} panelRefs={panelRefs} total={days.length} route={resolvedRoute} stops={resolvedStops} />
+          <SriLankaMap activeDay={activeDay} panelRefs={panelRefs} total={days.length} route={route} stops={stops} />
         </div>
 
         <div className="md:hidden p-6" style={{ height: 420 }}>
-          <SriLankaMap activeDay={activeDay} panelRefs={panelRefs} total={days.length} route={resolvedRoute} stops={resolvedStops} />
+          <SriLankaMap activeDay={activeDay} panelRefs={panelRefs} total={days.length} route={route} stops={stops} />
         </div>
 
         <div className="bg-navy">
           {days.map((day, i) => {
             const on = day.day === activeDay;
-            const city = resolvedStops.find((d) => d.days.includes(day.day))?.label ?? day.stay;
+            const city = stops.find((d) => d.days.includes(day.day))?.label ?? day.stay;
             return (
               <div
                 key={day.day}
