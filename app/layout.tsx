@@ -12,7 +12,7 @@ const inter = Inter({
 
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://pearltraillankatour.com";
-const TITLE = "PearlTrailLankaTours — Explore Sri Lanka Beyond the Ordinary";
+const TITLE = "Pearl Trail Lanka Tours - Explore Sri Lanka Beyond the Ordinary";
 const DESCRIPTION =
   "Premium Sri Lanka tour packages, airport transfers, rent-a-car, hotel bookings and complete travel assistance. Based in Colombo, Sri Lanka.";
 
